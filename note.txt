@@ -1,0 +1,49 @@
+//shift + 1 + tap để tạo cấu trúc file html
+mdn web docs: để học thẻ
+//web archieve để xem giao diện của tất cả các web trên thế giới
+//bôi đen khối + alt + w để chèn thêm thẻ vào khối code đó 
+//web diffchecker để so sánh code
+//web emmet -> cheat sheet
+//web unplash để lấy hình ảnh 
+lang="en" //khai báo cho trình duyệt biết đang dùng ngôn ngữ nào
+<head> :- chứa thông tin của trang web mà ko dc hiển thị trực tiếp lên trình duyệt của user
+        - chứa thông tin như tiêu đề trang, từ khóa, thông tin tác giả, tập tin css và js ...
+//ctrl + k + c : cmt
+//ctrl + k + u: un cmt
+//ctrl + d: chọn những từ giống nhau
+//nhấn giữ alt để chọn nhìu dòng
+//alt + shift + xuống: copy dòng trên xuống dòng dưới
+<title> : tiêu đề trang web. vd: google, facebook...
+Lorem9: sinh ra 9 ký tự ngẫu nhiên
+Lorem*3: sinh ra 3 dòng
+Lorem: 1 dòng 30 từ
+<body>: chứa nd chính của web: văn bản, mã js, các định dạng...
+<h1> - <h6>: định nghĩa tiêu đề trang
+<p>: chứa các đoạn văn
+<b>: bold: in đậm (dùng strong thay thế nội dung quan trọng - có ngữ nghĩa so với trình duyệt)
+<i>: italic: in nghiêng (dùng em-emphasis để nhấn mạnh nội dung)
+<u>: underline: gạch chân 
+<a>: anchor: gắn kèm đường dẫn (link, mail, sdt)
+        <!--Để trống href -> tải lại trang-->
+        --> href = "#" : trở lên đầu trang
+        --> ko nhập gì mặc định target = "_self"
+        --> _blank: mở tab mới
+        --> href = "tel:...": chuyển hướng đến app có thể gọi điện thoại
+        --> href = "mailto:...": chuyển hướng đến app để gửi mail
+                -> cc=: ds email nhận đc bản sao của mail(, để gửi nhìu ng)
+                -> bcc: ds email ẩn sẽ nhận dc bản sao của thư (ko thấy ng trong to vs cc)
+                -> subject: tiêu đề thư
+                -> body: nội dung thư
+                -> ?: dấu phân cách giữa phần mailto và tham số
+                -> &: dấu phân cách tham số (không có dấu cách)
+<img>: image: hình ảnh
+        ->alt: hiển thị text khi lỗi hình ảnh/ hỗ trợ trình đọc màn hình cho ng khiếm thị/ công cụ tìm kiếm trên gg
+        -> height và width= chiều cao và rộng của ảnh.vd width = "50" -> 50 pixel/ width = "50%" -> 50% của web
+        -> thường xét 1 chìu height or width để ảnh ko vỡ
+        -> path tương đối thường có ./ -> ./ để thấy file/folder cùng cấp (phụ thuộc vào vị trí đứng của thư mục hiện tại): tương lai thay đôi
+        -> ../ để thấy file/folder trước (1 ../ là lùi 1 cấp)
+        -> path tuyệt đối duyệt từ gốc (dùng /): tương lai ko đổi
+<ul>: un-ordered list: danh sách ko có thứ tự
+<ol>: ordered list: danh sách có thứ tự
+<br>: break: ngắt dòng or phá vỡ - thẻ tự đóng (1 thẻ <br> or <br />)
+<hr>: horizontal rule: tạo đường kẻ ngang  ngăn cách trên trang - thẻ tự đóng
