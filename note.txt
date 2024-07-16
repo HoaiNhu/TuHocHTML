@@ -5,7 +5,11 @@ mdn web docs: để học thẻ
 //web diffchecker để so sánh code
 //web emmet -> cheat sheet
 //web unplash để lấy hình ảnh
-//web html entities list -> thể hiển ký tự đặc biệt trong web
+//web html entities list -> thể hiển ký tự đặc biệt trong web (UTF - 8 thì có thể hiển thị emoji lun )
+//web codebeauty, search html escape.. -> chuyển code thành entities
+
+
+
 
 lang="en" //khai báo cho trình duyệt biết đang dùng ngôn ngữ nào
 <head> :- chứa thông tin của trang web mà ko dc hiển thị trực tiếp lên trình duyệt của user
@@ -64,3 +68,32 @@ Lorem: 1 dòng 30 từ
 <ol>: ordered list: danh sách có thứ tự
 <br>: break: ngắt dòng or phá vỡ - thẻ tự đóng (1 thẻ <br> or <br />)
 <hr>: horizontal rule: tạo đường kẻ ngang  ngăn cách trên trang - thẻ tự đóng
+<pre>: preformat: giữ nguyên định dạng văn bản vd: khoảng trắng, thụt đầu dòng
+<code>: thẻ có ngữ nghĩa web sẽ hiểu nó đoạn code thật trên web
+        --> Highlight code vs thư viện PrismJS
+            -> thêm dòng nè trên <head>:     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css">
+            -> Step 2: Thêm class="language-html" vào thẻ mở code -->
+            -> <!-- Step3: Thêm đoạn code sau trước thẻ đóng </body> -->
+                         <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+                         <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<table>: để tạo bảng
+        - <tr>: table row: 1 hàng
+        - <td>: table data: 1 ô dữ liệu
+        - <th>: table header: 1 ô tiêu đề
+        - <thead>: table header: định nghĩa tiêu đề bảng, thường chứa các ô <th>
+        - <tbody>: table body: định nghĩa phần thân bảng, thường chứa thẻ <tr> và <td>
+        - <tfoot>: table footer: chân bảng, định nghĩa phần cuối bảng, thường chứa ô tổng kết, chú thích or thông tin cuối cùng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
