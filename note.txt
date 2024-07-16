@@ -4,7 +4,9 @@ mdn web docs: để học thẻ
 //bôi đen khối + alt + w để chèn thêm thẻ vào khối code đó 
 //web diffchecker để so sánh code
 //web emmet -> cheat sheet
-//web unplash để lấy hình ảnh 
+//web unplash để lấy hình ảnh
+//web html entities list -> thể hiển ký tự đặc biệt trong web
+
 lang="en" //khai báo cho trình duyệt biết đang dùng ngôn ngữ nào
 <head> :- chứa thông tin của trang web mà ko dc hiển thị trực tiếp lên trình duyệt của user
         - chứa thông tin như tiêu đề trang, từ khóa, thông tin tác giả, tập tin css và js ...
