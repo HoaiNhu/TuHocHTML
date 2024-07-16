@@ -13,6 +13,21 @@ lang="en" //khai báo cho trình duyệt biết đang dùng ngôn ngữ nào
 //ctrl + d: chọn những từ giống nhau
 //nhấn giữ alt để chọn nhìu dòng
 //alt + shift + xuống: copy dòng trên xuống dòng dưới
+//git branch: kiểm tra nhánh trên máy
+//git branch -a: kiểm tra nhánh trên máy và trên github
+//git branch -c <ten_nhanh>: tạo nhánh mới -> copy all code nhánh hiện tại qua nhánh mới
+//git checkout <ten_nhanh>: chuyển nhánh làm việc -> code chỉ thay đổi ở nhánh dg lm 
+//git checkout -b <ten_nhanh>: tạo và chuyển nhánh (lấy code cũ và commit )
+//git push  -u(--set-upstream) origin <ten_nhanh>: đẩy code theo từng nhánh
+//git branch -d <ten_nhanh>: xóa nhánh (ko xóa nhánh hiện tại và nhánh chưa push)
+//git push -d origin <ten_nhanh>: push và xóa nhánh 
+//git log (--online): xem lịch sử -> nhấn q để thoát 
+//git checkout <id_commit>: trở về code cũ 
+
+
+
+
+
 <title> : tiêu đề trang web. vd: google, facebook...
 Lorem9: sinh ra 9 ký tự ngẫu nhiên
 Lorem*3: sinh ra 3 dòng
