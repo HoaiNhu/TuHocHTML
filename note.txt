@@ -7,7 +7,7 @@ mdn web docs: để học thẻ
 //web unplash để lấy hình ảnh
 //web html entities list -> thể hiển ký tự đặc biệt trong web (UTF - 8 thì có thể hiển thị emoji lun )
 //web codebeauty, search html escape.. -> chuyển code thành entities
-
+//Internal css w3school để chèn css
 
 
 
@@ -83,9 +83,14 @@ Lorem: 1 dòng 30 từ
         - <thead>: table header: định nghĩa tiêu đề bảng, thường chứa các ô <th>
         - <tbody>: table body: định nghĩa phần thân bảng, thường chứa thẻ <tr> và <td>
         - <tfoot>: table footer: chân bảng, định nghĩa phần cuối bảng, thường chứa ô tổng kết, chú thích or thông tin cuối cùng
+        - colspan : chỉ định phần tử chiếm bnhiu CỘT
+        - rowspan: chỉ định phần tử chiếm bnhiu HÀNG
 
-
-
+/------------------------------------------------//
+- Có 3 nơi có thể đặt css
+-> Inline: css nội tuyến <tag style="css">
+-> Internal: css nội bộ: <style>css<style>, h1... là các selector -> tác động lên toàn bộ 1 thẻ dc chọn
+-> External: css bên ngoài: <link href="style.css"> -> viết mã css thành 1 tệp .css riêng -> trên head gõ link:css -> nhấn vào style.css ctrl+click để tạo file style.css
 
 
 
