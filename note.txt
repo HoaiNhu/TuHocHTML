@@ -1,19 +1,38 @@
-//shift + 1 + tap để tạo cấu trúc file html
-mdn web docs: để học thẻ
+//Code pen để tập code html: https://codepen.io/
+//mdn web docs: để học thẻ: https://developer.mozilla.org/en-US/
 //web archieve để xem giao diện của tất cả các web trên thế giới
-//bôi đen khối + alt + w để chèn thêm thẻ vào khối code đó 
-//web diffchecker để so sánh code
-//web emmet -> cheat sheet
-//web unplash để lấy hình ảnh
-//web html entities list -> thể hiển ký tự đặc biệt trong web (UTF - 8 thì có thể hiển thị emoji lun )
-//web codebeauty, search html escape.. -> chuyển code thành entities
-//Internal css w3school để chèn css
+//web diffchecker để so sánh code: https://www.diffchecker.com/
+//web emmet -> cheat sheet: https://docs.emmet.io/cheat-sheet/
+//web unplash để lấy hình ảnh: https://unsplash.com/
+//web html entities list -> thể hiển ký tự đặc biệt trong web (UTF - 8 thì có thể hiển thị emoji lun ): https://www.freeformatter.com/html-entities.html
+//web codebeauty, search html escape.. -> chuyển code thành entities: https://codebeautify.org/html-escape-unescape#google_vignette
+//Internal css w3school để chèn css: https://www.w3schools.com/CSS/css_howto.asp
+//css reference w3c: để tham khảo thuộc tính css: https://www.w3schools.com/cssref/index.php
+/web make favicon online -> tạo favicon -> lấy code dán dô head: https://www.favicon-generator.org/
+//vendor prefix css -> tìm prefix : https://www.geeksforgeeks.org/explain-css-vendor-prefixes/
+//autop prefix: https://autoprefixer.github.io/
+//Caniuse.com : kiểm tra thuộc tính có cần sử dụng prefix ko để hổ trợ đa trình duyệt: https://caniuse.com/
+//HTMl table basic: học về bảng: https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics
+//PrimJS: học thêm dìa css: https://prismjs.com/
+//css selector w3c: học selector: https://www.w3schools.com/cssref/css_selectors.php
+//validator html: kiểm tra code có bị trùng ko: https://validator.w3.org/#validate_by_input
 
 
 
+
+
+
+
+
+
+
+
+
+//shift + 1 + tap để tạo cấu trúc file html
 lang="en" //khai báo cho trình duyệt biết đang dùng ngôn ngữ nào
 <head> :- chứa thông tin của trang web mà ko dc hiển thị trực tiếp lên trình duyệt của user
         - chứa thông tin như tiêu đề trang, từ khóa, thông tin tác giả, tập tin css và js ...
+//bôi đen khối + alt + w để chèn thêm thẻ vào khối code đó
 //ctrl + k + c : cmt
 //ctrl + k + u: un cmt
 //ctrl + d: chọn những từ giống nhau
@@ -85,20 +104,29 @@ Lorem: 1 dòng 30 từ
         - <tfoot>: table footer: chân bảng, định nghĩa phần cuối bảng, thường chứa ô tổng kết, chú thích or thông tin cuối cùng
         - colspan : chỉ định phần tử chiếm bnhiu CỘT
         - rowspan: chỉ định phần tử chiếm bnhiu HÀNG
+<span>: tách từ trong đoạn
 
 /------------------------------------------------//
 - Có 3 nơi có thể đặt css
 -> Inline: css nội tuyến <tag style="css">
 -> Internal: css nội bộ: <style>css<style>, h1... là các selector -> tác động lên toàn bộ 1 thẻ dc chọn
 -> External: css bên ngoài: <link href="style.css"> -> viết mã css thành 1 tệp .css riêng -> trên head gõ link:css -> nhấn vào style.css ctrl+click để tạo file style.css
+---> ĐỘ ưu tiên : Inline  cao nhất -> Internal or External (tk nào viết sau tk đó định nghĩa)
+- Opacity: quy định độ trong suốt (0 -> 100% / 0 -> 1.0 : mờ -> rõ nhất) nhưng vẫn có thể tương tác, vẫn chiếm ko gian
+- Display: none -> ẩn phần tử khỏi giao diện (xóa cả ko gian nó chiếm)
+- Visibility: ẩn or hiện element: ko tương tác dc nhưng vẫn chiếm ko gian
 
+Type                    | opacity: 0 | display: none | visibility: hidden
+-------------------------------------------------------------------------
+Ẩn khỏi giao diện       |     ✓      |       ✓       |         ✓
+Chiếm ko gian           |     ✓      |       ✗       |         ✓
+Có thể tương tác        |     ✓      |       ✗       |         ✗
+Ẩn phần tử con          |     ✓      |       ✓       |         ✓
+Tính thừa kế            |     ✗      |       ✓       |         ✓
+Hiển thị phần tử con    |     ✗      |       ✗       |         ✓ :hiển thị riêng lẻ các phần tử con trong câu...
+Hỗ trợ Animations       |      ✓     |       ✗       |         ✓  
 
-
-
-
-
-
-
-
-
-
+- Thêm favicon: nhập trên head link:favicon -> 
+- id: để chọn 1 phần tử nhất định( sử dụng bên style thì dùng #<ten_id>)
+- class: do ko sd lại tên id -> mún khai báo trùng lặp thì dùng class -> bên style dùng .<tên_class> -
+        -> có thể khai báo nhìu class cùng thẻ cách nhau bởi dấu cách
