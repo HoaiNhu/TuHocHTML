@@ -1,0 +1,30 @@
+/* p {
+  color: red;
+}
+
+[target="_blank"] {
+  color: greenyellow;
+}
+
+[title~="tuhoc.cc"]
+{
+    color: orange;
+} */
+
+/* [title*="tuhoc.cc"] {
+  color: red;
+} */
+
+/* [title|="pic"] {
+  color: brown;
+} */
+
+/* [title^="pic"] {
+    color: brown;
+  }
+ */
+
+[title $= "c"]
+{
+    color: aqua;
+}

@@ -1,0 +1,17 @@
+/* Tác động vào all thẻ p nằm trong thẻ div */
+/* div p {
+  color: blue;
+} */
+
+.loichuc p {
+  font-size: 30px;
+}
+
+/* Tác động vào con trực tiếp */
+div > p{
+    color: red;
+}
+
+block > p{
+    color: green;
+}

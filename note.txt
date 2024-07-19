@@ -16,6 +16,7 @@
 //PrimJS: học thêm dìa css: https://prismjs.com/
 //css selector w3c: học selector: https://www.w3schools.com/cssref/css_selectors.php
 //validator html: kiểm tra code có bị trùng ko: https://validator.w3.org/#validate_by_input
+//css selector: học selector : https://www.w3schools.com/CSS/css_selectors.asp
 
 
 
@@ -130,3 +131,35 @@ Hỗ trợ Animations       |      ✓     |       ✗       |         ✓
 - id: để chọn 1 phần tử nhất định( sử dụng bên style thì dùng #<ten_id>)
 - class: do ko sd lại tên id -> mún khai báo trùng lặp thì dùng class -> bên style dùng .<tên_class> -
         -> có thể khai báo nhìu class cùng thẻ cách nhau bởi dấu cách
+- *selector: chọn tất cả element (style khai báo *)
+- element.class: vd p.intro: chọn tất cả thẻ p có class là intro
+- , selector: liệt kê selector
+- .class1.class2 (ko có cách): chọn tất cả các thẻ có đồng thời class name là name1 và name2
+- space selector: vd div p: chọn tất cả thẻ p nằm trong thẻ div
+        -> selector1 [space] selector2: selector2 là con của selector1
+- element>element: vd div > p : chọn tất cả thẻ p là con trực tiếp của thẻ div
+        -> selector1 > selector2: selector2 là con trực tiếp của selector1
+        -> con trực tiếp: thẻ thụt vào 1 cấp so vs thẻ trc
+- element + element: vd: div + p: Chọn phần tử <p> đặt ngay sau phần tử <div>
+        -> selector1 + selector2: s2 đầu tiên sát ngay sau s1
+        -> Sát ngay sau: dòng dưới sát lun
+- element ~ element: vd: div ~ p: chọn tất cả thẻ p nằm sau thẻ div
+        -> selector1 ~ selector2: tất cả s2 nằm sau s1
+        -> Nằm sau: ở sau là dc
+- attribute [target]: chọn tất cả thẻ có thuộc tính target
+- attribute = value: [target = "_blank"]: chọn tất cả thuộc tính có chính xác giá trị targer = _blank
+- [attribute~=value]: [title~="flower"]: Chọn tất cả các thuộc tính title chứa từ flower
+- [attribute*=value]: [title *= "pic"]: chọn tất cả thuộc tính title chứa chuỗi pic trong giá trị, vd: pic 123, picccc...
+- [attribute|=value]: [title |= "pic"]: chọn tất cả thuộc tính title có từ duy nhất bắt đầu = từ pic: vd: pic, pic-123... (có chính xác giá trị mà từ pic bắt đầu)
+        -> pic đứng đơn lẻ hoặc từ pic đứng đầu và các từ sau nối với pic = dấu -
+- [attribute^=value]: [title ^= "pic"]: chọn tất cả các thẻ có title bắt đầu bằng từ pic (ko quan tâm có space ở sau)
+- [attribute$=value]: [title $= "c"]: chọn tất cả các thẻ có title kết thúc bằng kí tự c
+        ->kết thúc = j cx dc
+
+
+
+
+
+
+
+
