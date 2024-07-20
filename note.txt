@@ -17,8 +17,8 @@
 //css selector w3c: học selector: https://www.w3schools.com/cssref/css_selectors.php
 //validator html: kiểm tra code có bị trùng ko: https://validator.w3.org/#validate_by_input
 //css selector: học selector : https://www.w3schools.com/CSS/css_selectors.asp
-
-
+//pseudo classes: https://www.w3schools.com/css/css_pseudo_classes.asp , https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+//css specificity: học độ ưu tiên: https://www.w3schools.com/css/css_specificity.asp
 
 
 
@@ -155,11 +155,34 @@ Hỗ trợ Animations       |      ✓     |       ✗       |         ✓
 - [attribute^=value]: [title ^= "pic"]: chọn tất cả các thẻ có title bắt đầu bằng từ pic (ko quan tâm có space ở sau)
 - [attribute$=value]: [title $= "c"]: chọn tất cả các thẻ có title kết thúc bằng kí tự c
         ->kết thúc = j cx dc
-
-
-
-
-
-
-
+- Pseudo class: lớp giả: định nghĩa 1 trạng thái đặc biệt của 1 phần tử
+        -> cú pháp: selector: Pseudo-classes{
+                                 khối lệnh css
+                                 property: value;
+                                }
+- :hover: vd: a : hover -> chọn các thẻ a khi di chuột qua
+- :active: vd: a : active -> chọn các thẻ a khi nhấn giữ chuột
+- :link: vd: a : link -> chọn các thẻ a có liên kết chưa click vào
+- :visited: vd: a : visited -> chọn các thẻ a có liên kết đã truy cập
+- :empty: vd: div: empty -> chọn các thẻ div ko có nội dung
+- :target: vd: #home:target -> chọn thẻ có id = "home" khi trên url có hash tương ứng. vd: https://domain.com/#home
+- :first-child: vd: p:first-child: chọn các thẻ p là thẻ con đầu tiên
+- :last-child: vd: p:last-child: chọn các thẻ p là thẻ con cuối cùng
+- :nth-child(n): vd: p:nth-child(2): chọn các thẻ p là thẻ con thứ 2 từ trên xuống( có thể dùng odd: nhảy theo n lẻ, even: nhảy theo n chẵn, 2n+1: để nhảy theo step mong muốn)
+- :nth-last-child(n): vd: p:nth-last-child(2): chọn các thẻ p là thẻ con thứ 2 từ cuối lên
+- :only-child: vd: p:only-child: chọn các thẻ p là thẻ con duy nhất
+        -> p là thẻ con duy nhất <=> chỉ có duy nhất 1 thẻ p trong khối
+- :first-of-type: vd: p:first-of-type: chọn thẻ p xuất hiện đầu tiên trong thẻ cha
+- :last-of-type: vd: p:last-of-type: chọn thẻ p xuất hiện cuối cùng trong thẻ cha
+- :nth-of-type(2): vd: p:nth-of-type(2): chọn thẻ p xuất hiện thứ 2 trong thẻ cha
+- :nth-last-of-type(2): vd: p:nth-last-of-type(2): chọn thẻ p xuất hiện thứ 2 trong thẻ cha từ dưới lên
+- :only-of-type: vd: p:only-of-type: chọn thẻ p xuất hiện duy nhất trong thẻ cha
+- :not(selector): vd: .top:not(p): chọn các thẻ trong class = "top" loại trừ các thẻ p
+- Thứ tự ưu tiên
+        1. !important
+        2. inline style
+        3. id(#) selector
+        4. class(.) hoặc pseudo classes (:) selector
+        5. element selector(h, li, div..)
+        6. universal selector(*): bộ chọn chung
 

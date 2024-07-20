@@ -1,0 +1,43 @@
+/* các thẻ có class là top, trừ thẻ p */
+/* .top:not(p){
+    color: yellowgreen;
+} */
+
+/* Có thể áp dụng các pseudo classes khác */
+.top:not(:first-of-type)
+{
+    color: grey;
+}
+
+/* universal selector */
+* {
+    color: red;
+}
+
+/* element selector */
+h3 {
+    color: blue;
+}
+
+/* pseudo classes */
+.demo{
+    color: green;
+}
+
+/* id */
+#theh3{
+    color: blueviolet;
+}
+
+/* !important */
+/* h3 {
+    color: aqua !important; 
+} */
+
+
+
+
+
+
+
+

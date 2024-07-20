@@ -1,0 +1,41 @@
+/* Tác dụng lên selector khi di chuột qua */
+/* .demo:hover{
+    color: red;
+    font-size: 30px;
+}
+ */
+
+/* Tác dụng lên selector khi nhấn và giữ chuột */
+/* .demo:active{
+    color: red;
+    font-size: 30px;
+ } */
+
+/* Tác dụng lên selector khi có liên kết chưa truy cập */
+.clickme:link {
+  color: chocolate;
+}
+
+/* Tác dụng lên selector khi liên kết đã truy cập */
+.clickme:visited {
+  color: red;
+}
+
+/* Nếu thẻ div trống */
+.div_elm:empty {
+  background-color: aqua;
+  height: 50px; /*h50*/
+  width: 50px; /*w50*/
+}
+/* nếu thẻ div ko trống */
+.div_elm {
+  background-color: violet;
+  height: 50px; /*h50*/
+  width: 50px; /*w50*/
+}
+
+/* Tác động lên selector khi nhảy đến thẻ có id tương ứng */
+/* Khi nhấn vào link có id = "than_bai" thì thẻ h3 có id = "than_bai" sẽ chuyển xanh */
+h3:target {
+  color: blue;
+}

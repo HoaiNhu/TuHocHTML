@@ -1,0 +1,41 @@
+/* thẻ con p đầu tiên */
+/* p:first-child{
+    color: red;
+    font-size: 30px;
+} */
+
+/* thẻ con p cuối cùng */
+/* p:last-child{
+    color: blue;
+    font-size: 35px;
+} */
+
+/* thẻ con p thứ 2 từ trên xuống */
+/* p:nth-child(2)
+{
+    color: pink;
+} */
+
+/* p:nth-child(even)
+{
+    color: red;
+    font-size: 30px;
+} */
+
+/* p:nth-last-child(2n+1)
+{
+    color: red;
+    font-size: 30px;
+} */
+
+p:only-child{
+    color: aqua;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
