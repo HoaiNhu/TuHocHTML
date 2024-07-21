@@ -1,0 +1,50 @@
+div#padd {
+  width: 100px;
+  height: 100px;
+  color: yellow;
+  background-color: red;
+  /* padding: 20px; */
+  /* padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+
+  /* (trên dưới) - (trái, phải) */
+  /* padding: 20px 10px; */
+
+  /* trên - (trái, phải) - dưới */
+  /* padding: 20px 15px 25px; */
+
+  /* trên - phải - dưới - trái -> chiều kim đồng hồ */
+  padding: 10px 20px 30px 40px;
+}
+
+div#bor {
+  width: 100px;
+  height: 100px;
+  color: yellow;
+  background-color: blue;
+  border: 10px solid red;
+  /* border-top: 10px dotted red; */
+
+  /* viết tường minh thành 3 thành phần */
+  /* truyền đối số như padding */
+  /* border-width: 10px 20px 30px 40px;
+    border-style: dashed dotted double inset;
+    border-color: aqua rebeccapurple violet greenyellow; */
+
+  /* border-radius: 30px; */
+  /* ghi tường minh */
+  /* border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 40px; */
+
+  /* (trên trái, dưới phải) - (trên phải, dưới trái) -> đối xứng */
+  /* border-radius: 10px 20px; */
+
+  /* trên trái - (trên phải, dưới trái) - dưới phải */
+  /* border-radius: 10px 20px 50px; */
+
+  /* theo chiều kim đồng hồ */
+  border-radius: 10px 20px 50px 80px;
+}

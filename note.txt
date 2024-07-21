@@ -19,7 +19,8 @@
 //css selector: học selector : https://www.w3schools.com/CSS/css_selectors.asp
 //pseudo classes: https://www.w3schools.com/css/css_pseudo_classes.asp , https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 //css specificity: học độ ưu tiên: https://www.w3schools.com/css/css_specificity.asp
-
+//game.tuhoc.cc: để luyện tập: 
+/css border: xem kiểu viền: https://www.w3schools.com/css/css_border.asp
 
 
 
@@ -109,12 +110,19 @@ Lorem: 1 dòng 30 từ
 
 /------------------------------------------------//
 - Có 3 nơi có thể đặt css
+
 -> Inline: css nội tuyến <tag style="css">
+
 -> Internal: css nội bộ: <style>css<style>, h1... là các selector -> tác động lên toàn bộ 1 thẻ dc chọn
+
 -> External: css bên ngoài: <link href="style.css"> -> viết mã css thành 1 tệp .css riêng -> trên head gõ link:css -> nhấn vào style.css ctrl+click để tạo file style.css
+
 ---> ĐỘ ưu tiên : Inline  cao nhất -> Internal or External (tk nào viết sau tk đó định nghĩa)
+
 - Opacity: quy định độ trong suốt (0 -> 100% / 0 -> 1.0 : mờ -> rõ nhất) nhưng vẫn có thể tương tác, vẫn chiếm ko gian
+
 - Display: none -> ẩn phần tử khỏi giao diện (xóa cả ko gian nó chiếm)
+
 - Visibility: ẩn or hiện element: ko tương tác dc nhưng vẫn chiếm ko gian
 
 Type                    | opacity: 0 | display: none | visibility: hidden
@@ -128,56 +136,91 @@ Hiển thị phần tử con    |     ✗      |       ✗       |         ✓ :
 Hỗ trợ Animations       |      ✓     |       ✗       |         ✓  
 
 - Thêm favicon: nhập trên head link:favicon -> 
+
 - id: để chọn 1 phần tử nhất định( sử dụng bên style thì dùng #<ten_id>)
+
 - class: do ko sd lại tên id -> mún khai báo trùng lặp thì dùng class -> bên style dùng .<tên_class> -
         -> có thể khai báo nhìu class cùng thẻ cách nhau bởi dấu cách
 - *selector: chọn tất cả element (style khai báo *)
+
 - element.class: vd p.intro: chọn tất cả thẻ p có class là intro
+
 - , selector: liệt kê selector
+
 - .class1.class2 (ko có cách): chọn tất cả các thẻ có đồng thời class name là name1 và name2
+
 - space selector: vd div p: chọn tất cả thẻ p nằm trong thẻ div
         -> selector1 [space] selector2: selector2 là con của selector1
+
 - element>element: vd div > p : chọn tất cả thẻ p là con trực tiếp của thẻ div
         -> selector1 > selector2: selector2 là con trực tiếp của selector1
         -> con trực tiếp: thẻ thụt vào 1 cấp so vs thẻ trc
+
 - element + element: vd: div + p: Chọn phần tử <p> đặt ngay sau phần tử <div>
         -> selector1 + selector2: s2 đầu tiên sát ngay sau s1
         -> Sát ngay sau: dòng dưới sát lun
+
 - element ~ element: vd: div ~ p: chọn tất cả thẻ p nằm sau thẻ div
         -> selector1 ~ selector2: tất cả s2 nằm sau s1
         -> Nằm sau: ở sau là dc
+        
 - attribute [target]: chọn tất cả thẻ có thuộc tính target
+
 - attribute = value: [target = "_blank"]: chọn tất cả thuộc tính có chính xác giá trị targer = _blank
+
 - [attribute~=value]: [title~="flower"]: Chọn tất cả các thuộc tính title chứa từ flower
+
 - [attribute*=value]: [title *= "pic"]: chọn tất cả thuộc tính title chứa chuỗi pic trong giá trị, vd: pic 123, picccc...
+
 - [attribute|=value]: [title |= "pic"]: chọn tất cả thuộc tính title có từ duy nhất bắt đầu = từ pic: vd: pic, pic-123... (có chính xác giá trị mà từ pic bắt đầu)
         -> pic đứng đơn lẻ hoặc từ pic đứng đầu và các từ sau nối với pic = dấu -
 - [attribute^=value]: [title ^= "pic"]: chọn tất cả các thẻ có title bắt đầu bằng từ pic (ko quan tâm có space ở sau)
+
 - [attribute$=value]: [title $= "c"]: chọn tất cả các thẻ có title kết thúc bằng kí tự c
         ->kết thúc = j cx dc
+
 - Pseudo class: lớp giả: định nghĩa 1 trạng thái đặc biệt của 1 phần tử
         -> cú pháp: selector: Pseudo-classes{
                                  khối lệnh css
                                  property: value;
                                 }
+
 - :hover: vd: a : hover -> chọn các thẻ a khi di chuột qua
+
 - :active: vd: a : active -> chọn các thẻ a khi nhấn giữ chuột
+
 - :link: vd: a : link -> chọn các thẻ a có liên kết chưa click vào
+
 - :visited: vd: a : visited -> chọn các thẻ a có liên kết đã truy cập
+
 - :empty: vd: div: empty -> chọn các thẻ div ko có nội dung
+
 - :target: vd: #home:target -> chọn thẻ có id = "home" khi trên url có hash tương ứng. vd: https://domain.com/#home
+
 - :first-child: vd: p:first-child: chọn các thẻ p là thẻ con đầu tiên
+
 - :last-child: vd: p:last-child: chọn các thẻ p là thẻ con cuối cùng
-- :nth-child(n): vd: p:nth-child(2): chọn các thẻ p là thẻ con thứ 2 từ trên xuống( có thể dùng odd: nhảy theo n lẻ, even: nhảy theo n chẵn, 2n+1: để nhảy theo step mong muốn)
+
+- :nth-child(n): vd: p:nth-child(2): chọn các thẻ p là thẻ con thứ 2 từ trên xuống
+( có thể dùng odd: nhảy theo n lẻ, even: nhảy theo n chẵn, 2n+1: để nhảy theo step mong muốn)
+
 - :nth-last-child(n): vd: p:nth-last-child(2): chọn các thẻ p là thẻ con thứ 2 từ cuối lên
+
 - :only-child: vd: p:only-child: chọn các thẻ p là thẻ con duy nhất
         -> p là thẻ con duy nhất <=> chỉ có duy nhất 1 thẻ p trong khối
+
 - :first-of-type: vd: p:first-of-type: chọn thẻ p xuất hiện đầu tiên trong thẻ cha
+
 - :last-of-type: vd: p:last-of-type: chọn thẻ p xuất hiện cuối cùng trong thẻ cha
+
 - :nth-of-type(2): vd: p:nth-of-type(2): chọn thẻ p xuất hiện thứ 2 trong thẻ cha
+
 - :nth-last-of-type(2): vd: p:nth-last-of-type(2): chọn thẻ p xuất hiện thứ 2 trong thẻ cha từ dưới lên
+
 - :only-of-type: vd: p:only-of-type: chọn thẻ p xuất hiện duy nhất trong thẻ cha
+
 - :not(selector): vd: .top:not(p): chọn các thẻ trong class = "top" loại trừ các thẻ p
+
 - Thứ tự ưu tiên
         1. !important
         2. inline style
@@ -185,4 +228,65 @@ Hỗ trợ Animations       |      ✓     |       ✗       |         ✓
         4. class(.) hoặc pseudo classes (:) selector
         5. element selector(h, li, div..)
         6. universal selector(*): bộ chọn chung
+
+----------------
+- Box model: trình duyệt coi mỗi phần tử là 1 box - hình chữ nhật
+        -> 4 phần
+                1. Nội dung(width, heigth) -> hình ảnh, text, video...
+                2. padding -> khoảng đệm nội dung và viền -> khoảng ko chứa nội dung
+                3. border -> viền của phần tử (nét liền, đứt)
+                4. margin -> khoảng cách vs các phần tử liền kề khác
+        --> kích thước cao * rộng của 1 phần tử  = content + padding + border (ko bao gồm margin)
+- padding: phần đềm
+        -> các cách khai báo:
+        
+                /* (trên dưới) - (trái, phải) */
+                /* padding: 20px 10px; */
+
+                /* trên - (trái, phải) - dưới */
+                /* padding: 20px 15px 25px; */
+
+                /* trên - phải - dưới - trái */
+                padding: 10px 20px 30px 40px;
+
+- border: cú pháp: border: <độ rộng> <kiểu viển> <màu viền>
+        1. dashed: dg đứt nét
+        2. dotted: viền là các chấm dotted
+        3. 2 đg viền // liền nhau
+        4. groove: viền 3d (dg rãnh)
+        5. ridge: viền 3d (nhấp nhô)
+        6. inset: viền 3d
+        7. outset: viền 3d
+        8. solid: viền rắn
+        9. hidden: Ẩn
+        10. mix: ghép các kiểu viền lại
+
+- border-radius: bo góc 
+        1. top-left
+        2. top-right
+        3. bottom - left
+        4. bottom-right
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
