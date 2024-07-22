@@ -1,0 +1,15 @@
+.box_parent{
+    background-color: pink;
+    height: 250px;
+    /* cách trên vs phần tử khác 120 */
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box_child{
+    background-color: blue;
+    width: 50%;
+    /* cách trên vs cha 70 */
+    margin-top: 70px;
+}

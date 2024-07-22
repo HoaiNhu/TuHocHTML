@@ -21,8 +21,8 @@
 //css specificity: học độ ưu tiên: https://www.w3schools.com/css/css_specificity.asp
 //game.tuhoc.cc: để luyện tập: 
 /css border: xem kiểu viền: https://www.w3schools.com/css/css_border.asp
-
-
+//default css values: học thuộc tính mặc định của element: https://www.w3schools.com/cssref/css_default_values.php
+//WEb reset css: https://meyerweb.com/eric/tools/css/reset/
 
 
 
@@ -267,17 +267,42 @@ Hỗ trợ Animations       |      ✓     |       ✗       |         ✓
         3. bottom - left
         4. bottom-right
 
+- text-align: center; để canh giữa nội dung
+
+- margin: 0 auto; để đưa phần tử ra giữa trang web
+
+- margin collapse:
+        TH1.  là hiện tượng chồng lặp thuộc tính margin khi 2 PHẦN TỬ LIỀN KỀ cùng 
+        thiết lặp margin vs phần tử còn lại THEO CHIỀU DỌC(theo chiều ngang ko bị)
+        -> ví dụ: margin-top: 50px;
+                  margin-bottom: 70px;
+                  -> 2 khối cách nhau 70px thôi
+        --->Cách khắc phục
+        1. thiết lập margin 1 chiều
+        2. thêm thuộc tính display = flex vào thẻ cha chứa 2 phần tử đấy
+
+        TH2: xảy ra vs các phần tử có quan hệ cha con-> khi set margin cùng chiều cho thẻ cha và thẻ con thì 
+        sẽ bị collapse(kết hợp). kích thước nào lớn hơn thì quyết định
+
+- display: block: chiếm hết 1 dòng
+- display: inline: vừa đủ phần tử
+
+- outline: dg viền bao quanh mép ngoài cùng của đối tượng
+        -> ko lm tăng thêm kích thước phần tử
+        -> đơn giản là 1 vùng bao bên ngoài, chiếm cả vào phần margin( từ border ra ngoài đè lên margin) -> là lớp phủ bên ngoài
+        -> ko áp dụng vẽ theo nhiều chiều như border
+        -> có thêm thuộc tính outline-offset -> tách ra khỏi phần tử kích thước box ra ngoài
+
+- box sizing: content-box và border Box(dc sd thường vì để khớp kích thước vs thiết kế, tránh tính toán lại phần nội dung)
+        -> content-box: width, hight là kích thước của content -> bị thay đổi kích thước phần tử khi edit 
+        -> border-box: width, hight là kích thước của phần tử(1 box) -> ko thay đổi kích thước phần tử khi chỉnh sửa các thuộc tính khác
+        -> ko sửa box-sizing: web mặc định là content box
 
 
-
-
-
-
-
-
-
-
-
+- CSS default value: trình duyệt sẽ tự thêm vào các thuộc tính mặc định để hiển thị các thẻ cơ bản đã học
+Tuy nhiên những trình duyệt khác nhau sẽ có những thuộc tính mặc định khác nhau
+Có những CSS mặc định lm khó khăn trong việc kiểm soát kích thước và tính toán kích thước khi thiết kế
+--> Reset CSS
 
 
 
