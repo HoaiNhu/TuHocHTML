@@ -1,0 +1,11 @@
+.parent {
+  width: 60vw;
+  height: 60vh;
+  background-color: aquamarine;
+}
+
+.child{
+    width: 50vw;
+    height: 50vh;
+    background-color: blue;
+}

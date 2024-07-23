@@ -23,8 +23,8 @@
 /css border: xem kiểu viền: https://www.w3schools.com/css/css_border.asp
 //default css values: học thuộc tính mặc định của element: https://www.w3schools.com/cssref/css_default_values.php
 //WEb reset css: https://meyerweb.com/eric/tools/css/reset/
-
-
+//html block inline element: https://www.w3schools.com/htmL/html_blocks.asp
+//CSS units: https://www.w3schools.com/cssref/css_units.php
 
 
 
@@ -304,14 +304,40 @@ Tuy nhiên những trình duyệt khác nhau sẽ có những thuộc tính mặ
 Có những CSS mặc định lm khó khăn trong việc kiểm soát kích thước và tính toán kích thước khi thiết kế
 --> Reset CSS
 
+- Các thẻ HTML đều có thuộc tính display là block, inline, và inline-block
+        -> các thẻ html đều có display mặc định là block và inline
+        -> 
+- Block element: các thẻ  ở trạng thái mặc định luôn chiếm 100% chiều rộng của thẻ cha bất kể nội dung dài hay ngắn. vd: div, p, h1, h2, ul, ol...
 
+- Inline(nằm trong lòng) element: hộp có kích thước phụ thuộc vào nội dung bên trong nó. vd: a, strong, em, button...
+        -> Chú ý: 1 số thuộc tính CSS ko áp dụng dc vs inline element
+                1. padding-top và padding-bottom
+                2. margin-top và margin-bottom
+                3. width, height, min-width, min-height
+        -> Sở dĩ inline element ko áp dụng dc 1 số thuộc tính trên vì nó sinh ra để nằm trên cùng 1 hàng, và để tránh phá 
+        vỡ cấu trúc dòng.
+        -> Muốn thay đổi inline thì thêm dòng display: inline-block 
 
+- Pixel: picture element(thành phần hình ảnh)- điểm ảnh: là 1 kích thước cơ bản để đo hình ảnh kĩ thuật số
+        -> Độ rộng tuyệt đối: ko đổi khi thay đổi kích thước trang - cố định, chiều dài được biểu thị trong bất kỳ đơn vị nào trong số này sẽ xuất hiện chính xác là kích thước đó.
+                -> Đơn vị độ dài tuyệt đối không được khuyến khích sử dụng trên màn hình, vì kích thước màn hình khác nhau rất nhiều. Tuy nhiên, chúng có thể được sử dụng nếu môi trường đầu ra được biết đến, 
+                chẳng hạn như Đối với bố cục in.
 
+        -> Độ rộng tương đối: đổi khi thay đổi kích thước trang(em. rem...)
 
+- %: vd 12%: kích thước = 12% phần tử cha.
+        -> Nếu thẻ cha ko có kích thước thì sẽ lấy kích thước mặc định của trình duyệt, vd font-size mặc định của trình duyệt là 16px
+        -> Thẻ body sẽ tự co lại chiều cao cho khớp vs các phần tử (muốn con = bnhiu % thì body phải có chiều cao(px))
 
+- vw: view of width: chiều rộng khung nhìn. vd: 50vw: 50% chiều rộng khung nhìn (viewport- phần hiển thị trên browser) -> chỉ so vs viewport ko so vs thẻ cha
 
+- vh: view of height: chiều cao khung nhìn. vd: 50vh: 50% chiều cao khung nhìn (viewport- phần hiển thị trên browser)
 
-
-
-
+- em: vd: 2em: kích thước gấp 2 lần font chữ hiện tại(có kế thừa)
+        -> TH1. Thẻ cha và thẻ con ko có font-size -> lấy kích thước font-size của root(từ thể html- thường là 16px)
+        -> TH2. Thẻ cha có font-size tuyệt đối -> kế thừa font-size của thẻ cha
+        -> TH3. Thẻ cha và thẻ con đều đặt font-size -> ưu tiên font-size hiện tại của chính nó
+        -> TH4. Thẻ cha có font-size tương đối
+                -> thẻ cha sẽ lấy kích thước mặc định từ trình duyệt(thẻ html gốc 16px)
+                -> thẻ con tiếp tục kế thừa từ thẻ cha
 

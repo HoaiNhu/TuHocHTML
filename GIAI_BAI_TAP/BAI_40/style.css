@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  background-color: rgb(228, 198, 203);
+  border-radius: 999px;
+  color: #000;
+  display: inline-block;
+  width: 100px;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+a:hover {
+  background-color: #000;
+  color: rgb(228, 198, 203);
+}
+
+body {
+  background-color: aquamarine;
+}
