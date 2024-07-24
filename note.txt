@@ -25,6 +25,19 @@
 //WEb reset css: https://meyerweb.com/eric/tools/css/reset/
 //html block inline element: https://www.w3schools.com/htmL/html_blocks.asp
 //CSS units: https://www.w3schools.com/cssref/css_units.php
+//Color name: https://htmlcolorcodes.com/color-names/
+//Google Fonts: https://fonts.google.com/?preview.layout=grid
+//System Font stack: https://css-tricks.com/snippets/css/system-font-stack/
+//Css font stack: https://www.cssfontstack.com/
+//css <tên thuộc tính> property: kiểm tra có kế thừa ko
+//typography in css: https://cssreference.io/typography/
+
+
+
+
+
+
+
 
 
 
@@ -340,4 +353,63 @@ Có những CSS mặc định lm khó khăn trong việc kiểm soát kích thư
         -> TH4. Thẻ cha có font-size tương đối
                 -> thẻ cha sẽ lấy kích thước mặc định từ trình duyệt(thẻ html gốc 16px)
                 -> thẻ con tiếp tục kế thừa từ thẻ cha
+
+- rem: vd: 2rem: kích thước gấp 2 lần font chữ root element(ko kế thừa) -> size của thẻ html gốc (16px)
+        -> đổi theo cỡ chữ cở trình duyệt
+        -> dễ quản lí, chỉ cần thay đổi font-size thẻ html gốc còn lại tất cả giữ nguyên tỉ lệ
+----> Quy đổi pixel sang rem 
+        -> Thông thường 1 rem = 16px
+        -> Cần đổi sang tỉ lệ 1 rem = 10px
+        -> 10/16 * 100 = 62.5%
+        -> Cần giảm font-size của html xuống 62.5% 
+
+- CSS color:
+        1. rgb :red  green   blue
+           rgb(255,   0,      0)
+           rgb(0,    255,      0)
+           rgb(0,      0,     255)
+           or rgb(255 0 0) : bỏ , = space
+        
+        2. RGBA(red  green  blue  alpha) //alpha: 0 | 1 : 0 là mờ nhất -> 1 là đậm nhất
+        -> viết tắt phải thêm / trc alpha. vd rgb(255 0 255 /0.5)
+
+        3. Hệ màu hex(hệ thập lục phân)
+        -> #rrggbb: 2 kí tự đầu là red
+                    2 kí tự giữa là green
+                    2 kí tự cuối là blue
+        -> giá trị mỗi kênh màu chạy từ 00 - FF (rgb chạy từ 0 -> 255)
+        -> nếu kênh màu có 2 kí tự giống nhau thì rút gọn lại còn 1. vd #ff00ff = #f0f
+        -> Vẫn có kênh alpha : 2 kí tự cuối chạy từ 00 -> ff. vd #00ffcccc
+
+        4. Color name: vd deeppink
+
+        5. CurrentColor -> dùng lại màu dg dùng
+
+---> Màu xám ở ngoài cùng bên trái nên sẽ theo cặp giống nhau. vd: ccc, d3d3d3
+
+- Các kiểu font chữ thường sử dụng trong lập trình web
+        1. Sans serif: kiểu ko chân -> phần nội dung
+        2. serif: có chân -> thường phần tiêu đề
+        3. Monospace: cùng độ rộng, chiều ngang mọi chữ cái đều = nhau -> code
+        -> Mỗi kiểu font(Font family) sẽ có những font name tương ứng (Font name là tên của nhóm họ font)
+
+- System font: font chữ có sẵn trên hệ thống -> khi sử dụng System font có sẵn trên máy khách hàng để tối ưu hóa truy cập, đẩy nhanh tốc độ tải trang
+
+- Css inheritance - kế thừa: Các phần tử con nhận được giá trị thuộc tính thừa kế từ phần tử cha
+-> Các thuộc tính có kế thừa thường liên quan đến văn bản
+        1. font-family
+        2. font-size
+        3. font-weight
+        4. font-style
+        5. color
+        6. text-align
+        7. line-height
+        8. letter-spacing...
+
+- preconnect: mở kết nối đến máy chủ để tải tài nguyên nhanh hơn
+
+- font-weight: độ dày của chữ (thường từ 100 - 900)
+
+- line-height: chiều cao dòng.vd line-height: 1.5/150%: khoảng cách dòng = 1.5 lần font-size
+        -> có thể dùng line-height để căn giữa -> cho LH = height của thẻ
 
