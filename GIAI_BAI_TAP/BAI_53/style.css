@@ -1,0 +1,10 @@
+p{
+    /* white-space: normal; */
+    /* white-space: pre; */
+    /* white-space: nowrap; */
+    /* white-space: pre-line; */
+    /* white-space: pre-wrap; */
+    background-color: yellow;
+
+    word-break: break-all;
+}

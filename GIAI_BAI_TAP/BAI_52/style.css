@@ -1,0 +1,18 @@
+strong {
+  text-decoration: none;
+  text-decoration: underline;
+  text-decoration: line-through;
+  text-decoration: overline;
+  text-decoration: underline dashed blue 3px;
+
+  text-decoration: line-through overline;
+}
+
+.line{
+    text-indent: 40px;
+    /* text-indent: -40px; */
+    text-transform: lowercase;
+    /* text-transform: uppercase; */
+    /* text-transform: capitalize; */
+}
+

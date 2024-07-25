@@ -1,0 +1,20 @@
+/* p{
+    letter-spacing: -3px;
+    word-spacing: 50px;
+} */
+
+p {
+  /* text-align: left; */
+  /* text-align: right; */
+  /* text-align: center ; */
+  /* text-align: justify; */
+}
+
+.home {
+  text-align: center;
+  display: block;
+}
+
+/* body {
+    text-align: center;
+} */

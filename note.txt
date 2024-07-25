@@ -31,8 +31,9 @@
 //Css font stack: https://www.cssfontstack.com/
 //css <tên thuộc tính> property: kiểm tra có kế thừa ko
 //typography in css: https://cssreference.io/typography/
-
-
+//css generator: chỉnh shadow: https://cssgenerator.org/text-shadow-css-generator.html
+//overscroll-behavior: https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior , https://css-tricks.com/almanac/properties/o/overscroll-behavior/
+//custom scrollbar: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
 
 
 
@@ -412,4 +413,143 @@ Có những CSS mặc định lm khó khăn trong việc kiểm soát kích thư
 
 - line-height: chiều cao dòng.vd line-height: 1.5/150%: khoảng cách dòng = 1.5 lần font-size
         -> có thể dùng line-height để căn giữa -> cho LH = height của thẻ
+
+//Bài 51--------------------------------------------
+- letter spacing: tăng giảm khoảng cách giữa các kí tự
+
+- word spacing: tăng giảm khoảng cách giữa các từ
+
+- text align: căn text
+        1. = justify: căn dàn đều 2 bên
+        2. = left: căn trái - mặc định
+        3. = right: căn phải
+        4. = center: căn giữa
+---> chỉ căn text so với box chứa nó (thường là thẻ display = block)
+
+//Bài 52------------------------------------------
+- Text decoration: gạch chân
+        1. = none: bỏ gạch chân
+        2. = underline: thêm gạch chân
+        3. = line-through: thêm gạch ngang từ
+        4. = overline: gạch trên đầu
+        5. = <underline> <kiểu dấu gạch> <màu sắc> <kích thước>: tự định dạng gạch chân
+        6. kết hợp lại kiểu dc
+
+- text indent: thụt lề
+
+- text transform: đổi kiểu chữ
+        1. = capitalize: viết hoa chữ cái đâù mỗi từ
+        2. = lowercase: viết thường toàn bộ
+        3. = uppercase: viết hoa toàn bộ
+
+//Bài 53------------------------------------------   
+- white space: quy định về khoảng trắng
+        -> Ngoại trừ thẻ <pre> giữ nguyên định dạng code
+        a. trong code có nhiều khoảng trắng     -> 1 khoảng trắng
+        b. nhiều dấu xuống dòng                 -> 1 khoảng trắng
+        c. nội dung quá dài, chạm tới lề        -> xuống dòng
+--->Cách dùng
+        1. = normal: trạng thái mặc định
+        2. = nowrap: ko xuống dòng (kể cả chạm tới lề)
+        3. = pre: giữ nguyên định dạng (giống thẻ pre)
+        4. = pre-line: giữ nguyên định dạng theo line(enter);
+                -> Tất cả dấu khoảng trắng thừa mỗi dòng trong nội dung văn bản sẽ bị loại bỏ
+                -> Dòng mới (xuống dòng) được giữ nguyên
+        5. = pre-wrap: giữ nguyên định dạng code
+                -> Tất cả dấu cách thừa ở trong nội dung văn bản dc giữ nguyên
+                -> dòng mới(xuống dòng) được giữ nguyên
+                -> chạm tới lề -> tự động xuống dòng
+
+- word break: Khi đoạn text or link dài, ng dùng nhập liền nhau(ko có khoảng trắng) thì có thể gây vỡ giao diện vì text ko bị xuống dòng
+-> có thể dùng thuộc tính word break: break all để bẻ xuống dòng
+
+//Bài 54------------------------------------------------
+- text shadow: bóng đổ text
+-> text-shadow: <horizontal> <vertical> <blur> <color>
+        -> horizontal: trục nằm ngang(Ox)
+                -> 10px: dịch bóng sang phải 10px
+                -> -10px: dịch bóng sang trái 10px
+        -> vertical:trục thẳng (Oy)
+                -> 10px: dịch bóng xuống dưới 10px
+                -> -10px: dịch bóng lên trên 10px
+        -> blur: độ nhòe
+
+- overflow: xử lí phần thừa văn bản
+        1. visible(default): Thuộc tính mặc định hiển thị nội dung kể cả vượt box chứa
+        2. hidden: ẩn nội dung khi nội dung vượt box chứa
+        3. scroll: tạo thanh cuộn, luôn hiển thị vùng thanh cuốn
+        4. auto: Nếu nội dung ngắn -> ko có scroll bar
+                 Nếu nội dung dài, vượt box chứa -> tự động sinh scroll bar
+
+
+//Bài 55-------------------------------------------
+
+- overscroll-behavior:  Là 1 thuộc tính CSS dùng để điều chỉnh các trình duyệt xử lí sự kiện
+"overscrolling" , tức là ng dùng cuộn trang đến khi ko còn nội dung nữa 
+        1. overscroll-behavior: auto; -> lăn hết scroll con lăn lun scroll bự
+        2. overscroll-behavior: contain; -> lăn trong giới hạn box , ko kéo theo box ngoài
+        3. overscroll-behavior: none; -> lăn hết box thì trỏ chuột ra ngoài lăn tiếp, chỉ khác khi sử dụng mobile
+---->Các giá trị khác
+        /* Keyword values */
+overscroll-behavior: auto; /* default */
+overscroll-behavior: contain;
+overscroll-behavior: none;
+
+/* Two values */
+overscroll-behavior: none auto;
+overscroll-behavior: auto contain;
+
+/* Global values */
+overscroll-behavior: inherit; -> mặc định là auto
+overscroll-behavior: initial; -> thông qua giá trị của cha
+overscroll-behavior: revert;
+overscroll-behavior: unset;
+
+- custom - scrollbar: tùy biến thanh cuộn
+--> 
+/* width -> độ rộng của scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* border-radius: 5px; */
+  }
+  
+  /* Track -> hộp màu xám chứa thanh cuộn*/
+  ::-webkit-scrollbar-track {
+    background: rgba(142, 168, 180, 0.589);
+    border-radius: 5px;
+  }
+  
+  /* Handle -> cái thanh sờ vào để kéo */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover -> cái hành động khi ta di chuột vào*/
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2011a5cc;
+  }
+
+--> Nếu chỉ để dấu :: thì nó áp dụng cho tất cả thanh cuộn
+        -> Muốn chỉ định thanh cuộn nào thì thêm tên class trc all dấu ::
+
+
+//Bài 56--------------------------------------------
+
+- text-overflow: tạo dấu ... khi nội dung dài
+--->  Làm dấu ... ở dòng thứ 2, 3... -> bỏ đoạn code này vào
+{
+  -webkit-line-clamp: 2; //vượt quá 2 dòng thì hiển thị ...
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+
+}
+
+
+
+
+
+
+
+
 

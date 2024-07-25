@@ -1,0 +1,30 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    overflow: scroll;
+    overscroll-behavior: contain;
+}
+
+/* width -> độ rộng của scrollbar */
+.box::-webkit-scrollbar {
+    width: 10px;
+    /* border-radius: 5px; */
+  }
+  
+  /* Track -> hộp màu xám chứa thanh cuộn*/
+  .box::-webkit-scrollbar-track {
+    background: rgba(142, 168, 180, 0.589);
+    border-radius: 5px;
+  }
+  
+  /* Handle -> cái thanh sờ vào để kéo */
+  .box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover -> cái hành động khi ta di chuột vào*/
+  .box::-webkit-scrollbar-thumb:hover {
+    background: #2011a5cc;
+  }
