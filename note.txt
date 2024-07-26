@@ -34,10 +34,10 @@
 //css generator: chỉnh shadow: https://cssgenerator.org/text-shadow-css-generator.html
 //overscroll-behavior: https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior , https://css-tricks.com/almanac/properties/o/overscroll-behavior/
 //custom scrollbar: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
-
-
-
-
+//awesome font cdn:  lấy link để nhúng icon: https://cdnjs.com/libraries/font-awesome
+//font awesome: lấy icon: https://fontawesome.com/icons
+//linear gradient: css gradient: https://www.w3schools.com/css/css3_gradients.asp
+//css gradient.io: tạo dải màu chuyển sắc: https://cssgradient.io/gradient-backgrounds/
 
 
 
@@ -343,9 +343,9 @@ Có những CSS mặc định lm khó khăn trong việc kiểm soát kích thư
         -> Nếu thẻ cha ko có kích thước thì sẽ lấy kích thước mặc định của trình duyệt, vd font-size mặc định của trình duyệt là 16px
         -> Thẻ body sẽ tự co lại chiều cao cho khớp vs các phần tử (muốn con = bnhiu % thì body phải có chiều cao(px))
 
-- vw: view of width: chiều rộng khung nhìn. vd: 50vw: 50% chiều rộng khung nhìn (viewport- phần hiển thị trên browser) -> chỉ so vs viewport ko so vs thẻ cha
+- vw: viewport width: chiều rộng khung nhìn. vd: 50vw: 50% chiều rộng khung nhìn (viewport- phần hiển thị trên browser) -> chỉ so vs viewport ko so vs thẻ cha
 
-- vh: view of height: chiều cao khung nhìn. vd: 50vh: 50% chiều cao khung nhìn (viewport- phần hiển thị trên browser)
+- vh: viewport height: chiều cao khung nhìn. vd: 50vh: 50% chiều cao khung nhìn (viewport- phần hiển thị trên browser)
 
 - em: vd: 2em: kích thước gấp 2 lần font chữ hiện tại(có kế thừa)
         -> TH1. Thẻ cha và thẻ con ko có font-size -> lấy kích thước font-size của root(từ thể html- thường là 16px)
@@ -544,6 +544,105 @@ overscroll-behavior: unset;
   display: -webkit-box;
 
 }
+
+//Bài 57------------------------------------------------
+
+- Font awesome: web thêm biểu tượng cho trang web
+
+- list-style-type: none: để xóa dấu chấm trong trong thẻ li
+
+//Bài 58------------------------------------------------
+
+- background-color: 1. transparent: trong suốt
+                    2. red: dùng tên màu
+                    3. rgb()
+                    4. #ff00ff
+                    5. CurrentColor
+--> Nền sẽ đổ vào toàn bộ các phần tính vào kích thước phần tử (border, padding, content)
+
+//Bài 59-----------------------------------------------
+
+- background image: thêm hình nền
+--> Ở trạng thái mặc định, hình ảnh sẽ bị lặp vô hạn đến khi chiếm hết kích thước thẻ chứa nó
+
+- background-repeat: 
+        1. = repeat     -> BG lặp lại (mặc định)
+        2. = no-repeat  -> BG ko lặp lại
+        3. = repeat-x   -> BG lặp lại theo trục x (lặp theo chiều ngang)
+        4. = repeat-y   -> BG lặp theo trục y(lặp theo chiều dọc) 
+
+-->Lợi ích: có thể tạo ra nền đồng nhất từ 1 bức ảnh -> chiếm ít dung lượng
+
+- Xếp nhiều hình ảnh : ảnh xếp trc nằm trên, ảnh xếp sau nằm dưới
+        -> ảnh trên jpg thì sẽ che luôn ảnh sau -> nên để bg trong suốt để thấy ảnh sau(.png...)
+
+//Bài 60----------------------------------------------
+
+- background size: điều chỉnh kích thước của ảnh nền
+        -> khi chưa set kích cỡ thì ảnh sẽ hiển thị tỉ lệ 1:1
+        1. = contain: - ảnh vừa khung hình
+                      - Giữ nguyên tỉ lệ ảnh
+                      - ko bị mất ảnh
+                      - nếu còn khoảng trống, ảnh sẽ bị lặp lại
+
+        2. = cover:   - ảnh vừa khớp khung hình (kéo vừa khung)
+        (giống canva) - giữ nguyên tỉ lệ ảnh(ko bị méo)
+                      - có thể mất 1 phần ảnh bị thừa
+                      - ko bị lặp ảnh
+                
+- background-size: 100px -> chiều rộng sẽ là 100px (1 đối số)
+                   100px(%) 100px(%) -> chiều cao = chiều rộng = 100px(%) (có thể bị dãn/méo ảnh nếu thừa/thiếu 1 cạnh (%), or có thể bị lặp ảnh nếu thừa(px))
+
+
+//Bài 61-----------------------------------------------
+
+- background positon: vị trí bắt đầu đặt ảnh nền
+-->Các vị trí đặt ảnh nền
+        top left        top         top right
+
+        left            center       right
+
+        bottom left     bottom       bottom right
+
+--> sử dụng đơn vị % -> vượt thì lặp lại, no-repeat thì nền trắng
+
+ 0% 0% -------X----------->100% 0%
+   |
+   |
+   |
+   y
+   |
+   |
+0% 100%                    100% 100%
+
+--> sử dụng tọa độ cụ thể(px...)
+0 0: gốc trên bên trái của box chứa
+
+ 0 0 -------X----------->
+   |
+   |
+   |
+   y
+   |
+   |
+  
+//Bài 62--------------------------------------------------
+
+- linear gradient: tạo dải màu chuyển sắc
+--> cú pháp:
+        background-image: linear-gradient(direction, color-stop1, color-stop2)
+
+        -> bắt buộc phải có ít nhất 2 màu(color)
+        ->stop1, stop2 : % ko áp dụng chuyển sắc từng màu (từ 0 -> stop1(%) của box: trình duyệt sẽ giữ nguyên màu ban đầu, stop2: bắt đầu từ stop2 % thì ko chuyển màu -> tạo ranh giới)
+        -> direction: top to bottom(default)
+        to top left       to top(0 deg)         to top right (45)
+
+        to left(-90 deg)                                 to right(90 deg)
+
+        to bottom left     to bottom(180 deg)     to bottom right
+- repeating-linear-gradient: để lặp dãy màu
+
+
 
 
 
