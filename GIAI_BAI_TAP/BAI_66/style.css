@@ -1,0 +1,50 @@
+.box {
+  /* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment */
+  width: 200px;
+  height: 200px;
+  border: 50px dotted #000;
+
+  /* background-color: aqua; */
+  /* background-image: url(./bg/1.PNG); */
+  /* vị trí bắt đầu đặt ảnh nền */
+  /* background-position: top right; */
+  /* background-position: top left; */
+
+  /* Đơn vị % */
+  /* background-position: 0% 100%; */
+
+  /* đơn vị tuyệt đối */
+  /* background-position: 0px 100px; */
+  /* background-size: contain; */
+  /* background-size: cover; */
+
+  /* background-repeat: no-repeat; */
+
+  /* background-origin: border-box; */
+  /* background-origin: padding-box; */
+  /* background-origin: content-box; */
+
+  /* ảnh đổ từ boder vào trong */
+  /* background-clip: border-box; */
+  /* ảnh đổ từ padding vào trong */
+  /* background-clip: padding-box; */
+
+  /* background-attachment: mặc định ảnh sẽ bị cuộn theo thanh cuộn */
+  /* background-attachment: scroll; */
+  /* background-attachment: fixed ảnh cố định khi kéo scroll */
+  /* background-attachment: fixed; */
+  /* background-attachment: local  ảnh sẽ bị cuộn theo khi cuộn trong box con */
+  /* background-attachment: local; */
+
+
+/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment */
+
+background: red  ;
+background: red url(./bg/1.PNG) ;
+background: red url(./bg/1.PNG) left ;
+background: red url(./bg/1.PNG) left/contain ;
+background: red url(./bg/1.PNG) left/contain no-repeat;
+background: red url(./bg/1.PNG) left/contain no-repeat padding-box;
+background: red url(./bg/1.PNG) left/contain no-repeat padding-box border-box;
+background: red url(./bg/1.PNG) left/contain no-repeat padding-box border-box fixed;
+}

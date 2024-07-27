@@ -1,0 +1,28 @@
+.box{
+    width: 200px;
+    height: 200px;
+    /* căn giữa */
+    margin: 0 auto;
+    background: url(./bg/ava.png) center/cover;
+    /* clip-path: circle(50%); */
+    /* clip-path: circle(100px); */
+    /* mặc định */
+    /* dịch tâm đường tròn */
+    /* clip-path: circle(100px at 50% 50%); */
+    /* clip-path: circle(100px at 0% 0%); */
+
+    /* clip-path: inset(20px); */
+    /* clip-path: inset(20px 30px); */
+    /* clip-path: inset(20px 30px 40px); */
+    /* clip-path: inset(20px 30px 40px 50px); */
+
+    /* bo góc */
+    /* clip-path: inset(20px round 10px); */
+    /* clip-path: inset(20px round 10px 20px); */
+    /* clip-path: inset(20px round 10px 20px 30px); */
+    /* clip-path: inset(20px round 10px 20px 30px 40px); */
+    
+
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%, 50% 80%);
+    border-radius: 10px;
+}

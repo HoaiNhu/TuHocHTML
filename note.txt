@@ -38,9 +38,9 @@
 //font awesome: lấy icon: https://fontawesome.com/icons
 //linear gradient: css gradient: https://www.w3schools.com/css/css3_gradients.asp
 //css gradient.io: tạo dải màu chuyển sắc: https://cssgradient.io/gradient-backgrounds/
-
-
-
+//css background property: học viết tắt background: https://www.w3schools.com/cssref/css3_pr_background.php
+//backdrop filter: hiệu ứng cho nền phía sau: https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
+//css clip path: tạo hình đa giác: https://www.cssportal.com/css-clip-path-generator/
 
 
 
@@ -251,7 +251,7 @@ Hỗ trợ Animations       |      ✓     |       ✗       |         ✓
                 3. border -> viền của phần tử (nét liền, đứt)
                 4. margin -> khoảng cách vs các phần tử liền kề khác
         --> kích thước cao * rộng của 1 phần tử  = content + padding + border (ko bao gồm margin)
-- padding: phần đềm
+- padding: phần đệm
         -> các cách khai báo:
         
                 /* (trên dưới) - (trái, phải) */
@@ -564,6 +564,7 @@ overscroll-behavior: unset;
 
 - background image: thêm hình nền
 --> Ở trạng thái mặc định, hình ảnh sẽ bị lặp vô hạn đến khi chiếm hết kích thước thẻ chứa nó
+        -> none để loại bỏ ảnh nền
 
 - background-repeat: 
         1. = repeat     -> BG lặp lại (mặc định)
@@ -596,7 +597,7 @@ overscroll-behavior: unset;
 
 //Bài 61-----------------------------------------------
 
-- background positon: vị trí bắt đầu đặt ảnh nền
+- background position: vị trí bắt đầu đặt ảnh nền
 -->Các vị trí đặt ảnh nền
         top left        top         top right
 
@@ -642,13 +643,89 @@ overscroll-behavior: unset;
         to bottom left     to bottom(180 deg)     to bottom right
 - repeating-linear-gradient: để lặp dãy màu
 
+//Bài 63--------------------------------------------------
+
+- background attachment: 
+        1. scroll (default): ảnh sẽ tự động cuộn theo trình duyệt khi kéo xuống
+        2. fixed: ảnh cố định khi kéo scroll xuống (cái box di chuyển nhưng hình ảnh giữ nguyên)
+        3. local: ảnh cố định cục bộ trong bố cục con (kéo nội dung ảnh sẽ cuốn theo)
+
+//Bài 64--------------------------------------------------
+
+- background clip: quy định vùng đổ nền
+        1. border-box(default): Ảnh sẽ đổ full kích thước phần tử (content + padding + border) đổ từ border vào trong
+        2. padding- box: ảnh chỉ đổ đến padding (đổ padđing vào trong)
+        3. content-box: ảnh chỉ đổ phần content 
+
+- background-clip: text: để đổ nền text: đổ màu nền phần text, ko hiển thị phần trống ngoài text
+        -> -webkit-background-clip: text; để hổ trợ nhiều trình duyệt hơn
+
+/* Kiểm tra xem trình duyệt có hỗ trợ thuộc tính này ko có thì thực hiện đoạn lệnh trong {}*/
+/* @supports (background-clip: text) or (-webkit-background-clip: text) {
+  .text_hightline {
+    color: transparent;
+    background-color: pink;
+    background-image: linear-gradient(rgb(115, 222, 255), rgb(107, 235, 23));
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+} */
 
 
+//Bài 65------------------------------------------------
+
+- background origin: xác định bức ảnh đặt ở vị trí nào
+        1. border-box: gốc 0, 0 của ảnh sẽ ở border
+        2. padding-box: default - gốc ảnh mặc định ở phần padding
+        3. content-box: gốc 0, 0 của ảnh sẽ ở phần content
+
+//Bài 66------------------------------------------------
+
+-->Cú pháp viết tắt của background
+background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment
+vd: background: red url(./bg/1.PNG) left/contain no-repeat padding-box border-box fixed;
+
+//Bài 67-------------------------------------------------
+
+- backdrop filter: bộ lọc phông nền -> ứng dụng các hiệu ứng đồ họa cho vùng phía sau
+        1. blur: độ nhòe
+        2. invert: đảo ngc Màu
+        3. sepia: chuyển màu cổ điển
+        4. brightness: sáng tối
+        5. contrast: tương phản
+        6. drop-shadow: đổ bóng
+        7. grayscale: chế độ màu xám
+        8. hue-rotate: thay đổi ram Màu
+        9. saturate:  độ bão hòa
+
+-->ví dụ nhiều bộ lọc
+
+backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+
+//Bài 68---------------------------------------------------
+
+-Clip path: tạo ra 1 vùng cắt, nội dung bên trong vùng cắt sẽ dc hiển thị, nội dung bên ngoài vùng cắt sẽ bị ẩn đi (avt)
+        1. circle(<bán kính hình tròn px/%>): hình tròn
+                -> vd: 50% = 50% * max(width, height);
+                -> dịch tâm đường tròn theo x, y. vd: circle(40%(R) at 40%(x) 50%(y)) -> mặc định x = 50% và y = 50%
+        2. inset(): hình chữ nhật
+                a. Một đối số: đều 4 cạnh
+                b. 2 đối số: trên-dưới / trái-phải
+                c. 3 đối số: trên / trái - phải / dưới
+                d. 4 đối số: theo chiều kim đồng hồ
+                e. thêm bo góc khai báo sau Keyword: round (cũng dc 4 đối số cut theo góc như border-radius)
+        3. polygon(): cắt hình đa giác
+                ->Cú pháp chung: cặp x,y là các cặp tọa độ các góc theo x,y
+                -> clip-path: polygon(x y, x y, x y);
+                -> vd: clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
 
 
-
-
-
-
-
-
+--> 
+ 0% 0% -------X----------->100% 0%
+   |                        |
+   |                        |   
+   |                        |
+   y           (ẢNH)        |   
+   |                        |
+   |                        |
+0% 100% -------------------- 100% 100%
