@@ -41,6 +41,13 @@
 //css background property: học viết tắt background: https://www.w3schools.com/cssref/css3_pr_background.php
 //backdrop filter: hiệu ứng cho nền phía sau: https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
 //css clip path: tạo hình đa giác: https://www.cssportal.com/css-clip-path-generator/
+//box shadow css generator: tạo box shadow: https://cssgenerator.org/box-shadow-css-generator.html , https://box-shadow.dev/, có sẵn: https://getcssscan.com/css-box-shadow-examples
+//tài liệu box shadow: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+//pseudo element: https://www.w3schools.com/CSS/css_pseudo_elements.asp
+//css counter: tạo bộ đếm, đánh dấu phần thư mục: https://www.w3schools.com/CSS/css_counters.asp
+
+
+
 
 
 
@@ -729,3 +736,126 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
    |                        |
    |                        |
 0% 100% -------------------- 100% 100%
+
+//Bài 69-----------------------------------------
+
+- box shadow: đổ bóng cho box
+
+- có 2 giá trị bắt buộc: offset-x | offset-y
+        -> thêm ở sau là blur | spread radius| ..| color
+
+- thêm bóng đổ vào trong box: chèn Keyword : inset
+
+- đổ nhiều bóng: ngăn cách bởi dấu ,
+-> vd:     box-shadow: 160px 0px red, 0 160px green, 160px 160px yellow;
+
+//Bài 70-------------------------------------------
+
+- point event: sử dụng để kiểm soát hoạt động của chuột trên các phần tử HTML
+-> mặc định là auto
+-> point event = none: ko thể lấy link ảnh...(ko chuột phải dc), ko tương tác dc
+
+//Bài 71------------------------------------------
+
+- co dãn ảnh khi cho dãn web
+
+- Mẹo căn giữa thẻ chứa nó
+    display: block;
+    margin: 0 auto;
+
+- lazy load: sử dụng để tối ưu trang web khi nội dung trang web dài, việc load toàn bộ hình ảnh ngay khi truy cập là ko cần thiết
+-> giúp hỗ trợ chỉ tải ảnh khi người dùng cuộn gần đến phần nội dung hình Ảnh
+        -> mặc định sẽ tải tất cả hình ảnh ngay từ khi truy cập
+
+--> thêm loading = "lazy" thẻ img -> ảnh sẽ chưa load khi ng dùng chưa di chuyển đến gần ảnh
+        ->  <img src="./bg/bg1.jpg" alt="cat" class="demo" loading="lazy"/>
+
+//Bài 72-----------------------------------------
+
+- pseudo element: Một phần tử giả CSS được sử dụng để tạo kiểu cho các phần được chỉ định của một phần tử.
+
+- Ví dụ, nó có thể được sử dụng để:
+        -> Tạo kiểu cho chữ cái hoặc dòng đầu tiên của một phần tử
+        -> Chèn nội dung trước hoặc sau nội dung của một phần tử
+
+- ::first-line: vd: p:: first-line: chọn dòng đầu tiên các thẻ p
+        -> ko áp dụng vs thẻ display = inline, chỉ áp dụng vs thẻ block và inline-block
+        -> các thuộc tính dùng dc first-line:
+                font properties
+                color properties
+                background properties
+                word-spacing
+                letter-spacing
+                text-decoration
+                vertical-align
+                text-transform
+                line-height
+                clear
+
+- ::first-letter: vd p::first-letter: chọn chữ cái đầu tiên các thẻ p
+        -> các thuộc tính áp dụng dc first-letter
+                font properties
+                color properties 
+                background properties
+                margin properties
+                padding properties
+                border properties
+                text-decoration
+                vertical-align (only if "float" is "none")
+                text-transform
+                line-height
+                float
+                clear
+
+- ::selection: vd: p::selection: chọn phần tử vùng đang đc bôi đen các thẻ p
+
+- ::marker: vd: li::marker: chọn các điểm đánh dấu của các phần từ li 
+
+- :: before: vd: p::before: thêm phần tử vào đằng trc thẻ p
+
+- ::after: vd: p::after: thêm phần tử vào đằng sau thẻ p
+
+//Bài 73-------------------------------------------
+
+- css counter: tạo bộ đếm tự động
+--> các bước thực hiện
+        1. tạo biến đếm, reset = 0
+        -> counter-reset: section;
+                -> section: tên biến đếm
+        2. tăng biến đếm lên 1 khi gặp thẻ nào thì viết trong thẻ đó, tương tự cho counter-reset
+        -> counter-increment: section;
+        3. dùng pseudo element
+        -> vd thêm trc thẻ h2
+                -> h2::before{
+                        content: "Phần" counter(section) ": ";
+                        /* counter(section) :giá trị biến đếm */
+                }
+
+//Bài 74---------------------------------------------
+
+- hàm calc(): cho phép thực hiện các phép tính đơn giản: + - * /
+-> có thể sử dụng vs tất cả thuộc tính CSS về kích thước như width, height, margin, padding, top, left, background-position...
+
+- Chú ý: 
+        -> Sau calc ko dc có khoảng trắng
+        -> khi dùng vs toán tủ + - thì bắt buộc phải có khoảng trắng trc và sau toán tử + - 
+        -> toán tử * /
+                -> * : viết đơn vị trc hay sau đều dc. vd calc(100px * 2/ 2 * 100px)
+                -> / : phần có đơn vị bắt buộc viết trc, ko chia cho 0. vd: calc(100px / 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+p::first-line {
+  color: red;
+}
+
+span {
+  display: block;
+}
+
+span::first-line {
+  color: blue;
+  background-color: aqua;
+}
+
+p::first-letter{
+    font-size: 40px;
+    color: blue;
+}
+
+::selection{
+    background-color: yellow;
+}
+
+li::marker{
+    font-size: 40px;
+    color: red;
+}
+
+.box::before{
+    content: "em ở trc nè";
+    color: orangered;
+}
+.box::after{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    content: "";
+    color: aqua;
+}

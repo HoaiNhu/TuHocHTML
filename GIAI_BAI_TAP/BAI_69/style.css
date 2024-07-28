@@ -1,0 +1,16 @@
+.box{
+    width: 150px;
+    height: 150px;
+    margin: 100px;
+    background-color: pink;
+    /* box-shadow: 10px -20px peru;
+    /* thêm blur */
+    /* box-shadow: 10px -20px 5px peru; */
+    /* thêm bán kinh trải rộng */
+    /* box-shadow: 10px -20px 5px 50px peru; */ 
+    /* đổ trục x 10px, y 20px */
+    /* box-shadow: inset 20px 20px 5px 10px blue  ; */
+
+    /* đổ nhiều bóng */
+    box-shadow: 160px 0px red, 0 160px green, 160px 160px yellow;
+}
