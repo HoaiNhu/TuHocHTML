@@ -1,0 +1,72 @@
+/*  khai báo trong thẻ root or html thì có thể sd cho toàn trang
+ */
+:root{
+    --box-height: 100px;
+    --box-color: #0f0;
+}
+
+.box1{
+    height: var(--box-height);
+    background-color:var(--box-color);
+    margin-bottom: 10px;
+}
+
+.box2{
+    height: var(--box-height);
+    background-color:var(--box-color);
+    margin-bottom: 10px;
+}
+
+.box3{
+    height: var(--box-height);
+    background-color:var(--box-color);
+    margin-bottom: 10px;
+}
+
+/* Ghi đè */
+.box3{
+    height: 200px;
+}
+
+/* Phạm vi biến tùy thuộc vào vị trí khai báo */
+.detail{
+    --p_font-size: 30px;
+    /* font-size: 30px; */
+    /* font-size: var(--p_font-size); */
+}
+
+.detail span{
+    font-size: var(--p_font-size);
+}
+
+/* 4 giá trị backup */
+.content{
+    --background-box: red;
+
+}
+
+.box4{
+    height: 100px;
+    background-color: var(--background-box, purple);
+}
+
+
+
+
+/* .box1{
+    height: 100px;
+    background-color: #0f0;
+    margin-bottom: 10px;
+}
+
+.box2{
+    height: 100px;
+    background-color: #0f0;
+    margin-bottom: 10px;
+}
+
+.box3{
+    height: 100px;
+    background-color: #0f0;
+    margin-bottom: 10px;
+} */

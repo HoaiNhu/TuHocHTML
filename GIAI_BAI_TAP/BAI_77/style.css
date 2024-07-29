@@ -1,0 +1,45 @@
+.box{
+    width: 100px;
+    height: 100px;
+    color: white;
+    /* căn giữa text giữa các khối */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header{
+    background: yellow;
+    position: relative;
+}
+
+.content{
+    background-color: cyan;
+    width: 400px;
+    margin: 40px;
+    /* position: relative; */
+}
+.box1{
+    background: red;
+}
+
+.box2{
+    background-color: blue;
+    position: absolute;
+    /* width: 50px; */
+    /* height: 50px; */
+    /* left: 0; */
+    /* left: 50px; */
+    top: 0;
+    right: 50px;
+    /* bottom: 50px; */
+}
+
+.box3{
+    background-color: green;
+
+}
+
+h1{
+    background: rgb(250, 94, 250);
+}
