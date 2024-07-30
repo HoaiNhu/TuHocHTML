@@ -45,7 +45,7 @@
 //tài liệu box shadow: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
 //pseudo element: https://www.w3schools.com/CSS/css_pseudo_elements.asp
 //css counter: tạo bộ đếm, đánh dấu phần thư mục: https://www.w3schools.com/CSS/css_counters.asp
-
+//css flexbox csstrick: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
 
@@ -910,4 +910,96 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 - position:sticky -> tạo hiệu ứng bám dính cho phần tử khi thẻ cha gần nhất có thanh cuộn trang web
 --> định vị phần tử dính lại theo thẻ cha gần nhất có thanh cuộn scroll bar
 
+//Bài 82---------------------------------------------------
 
+- page layout: còn gọi là bố cục - dàn trang cơ bản là cách ta xếp đặt khối bố cục con (component layout) lên trên webpage
+        -> việc xếp đặt giúp cho trang web nhìn đẹp mắt và thu hút ng xem, và truyền tải nội dung 1 cách trật tự, logic
+
+- component layout: là các bố cục con, nơi mà text, images, video, và các nội dung khác dc xếp đặt
+
+- 3 cách phổ biến xây dựng layout vs CSS
+        1. float layout:giống layout báo, giúp dàn trang theo chìu ngang, hoặc chữ bao quanh ảnh
+                -> cách dùng: float: right/left
+                -> khi sử dụng thuộc tính float:left, image sẽ bị trôi khỏi luồng bth, các phần tử còn lại sẽ bao quanh phần tử image
+                -> trong trg hợp, mún 1 phần tử nào đó ko bị chèn ép để bao quanh hình. ta cần sử dụng
+                        -> clear: left -> clear giá trị float bên trái
+                        -> clear: right -> clear bên PHẢI
+                        -> clear: both -> clear cả 2 hướng (footer)
+                --> ít dc sd
+        2. flexbox
+        3. css grid
+
+//Bài 83-----------------------------------------------
+
+- flexbox: sẽ đưa phần tử ra khỏi luồng thông thường và sắp xếp theo 1 quy tắc riêng
+-> display:flex
+-> 2 trục chính
+        1. main axis: trục ngang
+        2. cross axix: trục dọc
+
+-> có 2 nhóm
+        1. flex-container: code trực tiếp vào class cha
+        2. flex-items: code trực tiếp cho item con
+
+--->Chú ý:
+        - start, end: là lun theo trục mặc định ko đổi chiều dù đổi trục
+        - flex-start, end: đổi chiều theo chiều của trục
+//Bài 84-----------------------------------------------
+
+-justify-content:  ăn theo trục main
+-> mặc định trục main axis sẽ nằm ngang, trục cross axis sẽ nằm dọc
+-> justify content sẽ căn các phần tử theo trục main axis 
+        -> main start: điểm bắt đầu (thường bên trái)
+        -> main end: điểm kết thúc (thường bên phải)
+        -> center: giữa
+-->Cách dùng:
+        1. = flex-start: phần tử bắt đầu từ bên trái(default)
+        2. = flex-end: phần tử bắt đầu từ bên PHẢI
+        3. = center: phần tử nằm ở giữa
+        4. = space-between: cách đều nhau, sát lề
+        5. = space-around: khoảng trắng xung quanh mỗi phần tử là bằng nhau (khoảng trống giữa 2 block x2)
+        6. = space-evenly: cách đều nhau, cách cả lề
+
+//Bài 85-----------------------------------------------
+
+-align-items: định vị trí item theo trục cross(dọc) - dùng cho 1 hàng -> ăn theo trục cross
+->align-item:stretch: - mặc định kéo dãn các phần tử container theo trục cross -> cho tất cả phần tử dãn vừa box chứa container
+
+--> Cách dùng:
+        1. = flex-start: tất cả item dồn lên trên (cross start)
+        2. = flex-end: tất cả item dồn xuống dưới (cross end)
+        3. = center: all item vào giữa box chứa
+        4. = baseline: căn theo chân phần tử
+
+//Bài 86-----------------------------------------------
+
+-flex-wrap: 
+        1. nowrap: mặc định -> ko xuống HÀNG
+        2. wrap: xuống hàng
+        3. wrap-reverse: xuống hàng + đảo ngược
+
+- align-content: áp dụng từ 2 hàng trở lên
+        1. = flex-start: căn theo cross start
+        2. = flex-end: căn theo cross end
+        3. = stretch: default -> căn đều theo trục cross và lắp đầy container
+        4. = center: căn giữa theo trục cross
+        5. = space-around: khoảng trắng xung quanh các hàng là đều nhau, cách lề (khoảng cách 2 hàng = x2 khoảng cách hàng ra lề)
+        6. = space-between: các hàng là đều nhau, sát lề
+        7. = space-evenly: khoảng cách các hàng đều nhau, cách lề
+
+//Bài 87-------------------------------------------------
+
+-flex-direction:  row | row-reverse
+ -> xoay hướng trục main axis cross axis ko đổi 
+        -> đổi hướng start --> end thành end <--- start
+-->Cách dùng
+        1. = row: default:
+        2. = row-reverse: đổi chiều trục main
+
+- flex-direction: columns | column-reverse
+-->columns:  trục main đổi thành trục dọc chiều từ trên xuống
+        -> trục cross thành trục ngang chiều từ trái qua phải
+--> columns-reverse: trục main thành trục dọc chiều từ dưới lên
+        -> trục cross thành trục ngang chiều từ trái qua phải
+
+- flex-flow: cú pháp viết tắt của flex wrap và flex direction

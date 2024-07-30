@@ -1,0 +1,28 @@
+.box {
+  background-color: blue;
+  border: 1px solid black;
+  color: white;
+}
+
+.container {
+  height: 200px;
+  display: flex;
+  background-color: cyan;
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* justify-content: start; */
+  /* justify-content: flex-end; */
+
+  /* justify-content: end; */
+  /* justify-content: flex-start; */
+
+  /* flex-direction: column; */
+  /* justify-content: flex-end; */
+  /* align-items: flex-end; */
+
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+}

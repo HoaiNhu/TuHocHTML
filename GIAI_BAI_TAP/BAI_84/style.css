@@ -1,0 +1,21 @@
+* {
+  font-size: 1.5rem;
+}
+body{
+    margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-self: flex-start;
+  justify-content: end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  background-color: cyan;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.692);
+}

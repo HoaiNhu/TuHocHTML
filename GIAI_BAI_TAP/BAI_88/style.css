@@ -1,0 +1,14 @@
+.box {
+  background-color: blue;
+  width: 30%;
+  border: 1px solid black;
+  color: white;
+}
+
+.container {
+  display: flex;
+  /* flex-wrap: wrap ; */
+  /* flex-direction: row-reverse; */
+  /* viết tắt */
+  flex-flow: wrap row-reverse;
+}
