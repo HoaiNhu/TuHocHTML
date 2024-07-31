@@ -1,0 +1,37 @@
+/* .container {
+  height: 150px;
+  display: flex;
+  background-color: cyan;
+  align-items: start;
+}
+
+.box {
+  background: pink;
+  border: 1px solid black;
+}
+
+.box2, .box3{
+    align-self: flex-end;
+} */
+
+
+/* flex-grow */
+.container{
+height: 150px;
+display: flex;
+background-color: cyan;
+}
+
+.box{
+    background-color: pink;
+    border: 1px solid black;
+    /* flex-grow: 1; */
+}
+
+.box1, .box3{
+    flex-grow: 1;
+}
+
+.box2{
+    flex-grow: 2;
+}

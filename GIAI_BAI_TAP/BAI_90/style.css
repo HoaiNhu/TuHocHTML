@@ -1,0 +1,27 @@
+.container {
+  height: 150px;
+  display: flex;
+  background-color: cyan;
+  /* flex-wrap: wrap; */
+  /* overflow: auto; */
+  flex-direction: column-reverse;
+}
+
+/* .box{
+    background-color: pink;
+    border: 1px solid #000;
+    width: 30%;
+    flex-shrink: 0;
+} */
+
+/* .box1, .box2{
+    flex-shrink: 1;
+} */
+
+.box {
+  /* width: 30%; */
+  /* height: 30%; */
+  flex-basis: 30%;
+  background-color: pink;
+  border: 1px solid #000;
+}

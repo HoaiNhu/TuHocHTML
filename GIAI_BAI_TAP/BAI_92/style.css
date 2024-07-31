@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    background-color: cyan;
+    height: 150px;
+    flex-direction: column;
+}
+
+.box1{
+    background-color: red;
+}
+
+.box2{
+    background-color: green;
+    /* margin-left: auto; */
+    margin-top: auto;
+}
+
+.box3{
+    background-color: blue;
+    /* margin-left: auto; */
+}
+
+.box4{
+    background-color: yellow;
+}
+
+.container1{
+    display: flex;
+    height: 100px;
+    background-color: cyan;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.fa-youtube{
+    font-size: 1.5rem;
+    color: red;
+    margin: auto;
+}

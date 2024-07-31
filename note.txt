@@ -75,6 +75,13 @@ lang="en" //khai báo cho trình duyệt biết đang dùng ngôn ngữ nào
     display: flex;
     justify-content: center;
     align-items: center;
+//Game học flexbox:
+        1 http://game.tuhoc.cc 
+        2 https://mastery.games/flexboxzombies 
+        3 https://knightsoftheflexboxtable.com 
+        4 https://codingfantasy.com/games/flexboxadventure/play 
+        5 http://www.flexboxdefense.com
+
 
 
 
@@ -1003,3 +1010,68 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
         -> trục cross thành trục ngang chiều từ trái qua phải
 
 - flex-flow: cú pháp viết tắt của flex wrap và flex direction
+
+//Bài 89---------------------------------------------------------
+
+- align-self: giống align- items nhưng chỉ tác động lên 1 box duy nhất
+        1. = flex-start:
+        2. = flex-end:
+        3. = center:
+        4. = baseline:
+        5. = stretch:
+
+- flex-grow: chia tỉ lệ theo trọng số các khối trong container
+        1. = 0: mặc định 
+        2. = 1
+        ...
+
+//Bài 90-------------------------------------------------
+
+- flex-shrink: xác định khả năng bị co lại của item nếu cần(vd. ko mún bị mất chữ...)
+        -> thích nghi vs ko gian hạn chế
+        = 0 : ko bị co lại
+        = 1: default: co lại vừa box chứa
+        = 2: co lại 2 lần
+        ...
+
+- flex-basis: set main size item (lưu ý main size theo trục main kể cả khi xoay trục)
+        
+//Bài 91--------------------------------------------------
+
+- flex: là cú pháp viết tắt của 
+        1. flex-grow: chia tỉ lệ
+        2. flex-shrink: co lại
+        3. flex-basis: set tỉ lệ theo trục main
+
+- thứ tự ưu tiên kích thước item (tăng từ 1 -> 4)
+        1. content width (ưu tiên thấp nhất)
+        2. width
+        3. flex-basis
+        4. min-width/max-width (ưu tiên cao nhất)
+                -> max-width: = chiều dài nội dung bên trong -> dừng lại ko co nx
+                -> min-width = kích thước từ dài nhất -> độ rộng tối thiểu -> ko co lại ko kéo nhỏ trình duyệt
+        -> chú ý:
+                -> nếu max-width < flex-basic -> max-width
+                -> nếu max-width > flex-basic -> flex-basic
+
+- order: thay đổi thứ tự item
+        = 0: mặc định 
+        -> giá trị càng cao thì nằm ở ngoài cùng
+
+//Bài 92---------------------------------------------------
+
+- dùng margin - <chiều> : auto để kéo phần tử 2 đầu container
+
+- margin = auto -> căn con chính giữa box cha
+
+
+
+
+
+
+
+
+
+
+
+
