@@ -1064,10 +1064,37 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - margin = auto -> căn con chính giữa box cha
 
+//Bài Figma to HTML
 
+- Bố cục của 1 trang web
+        1. header
+        2. body (navigation bar...)
+        3. footer
+        
+//Tạo web --------------------------------------------------
 
+- Tạo file index.html
 
+- tạo thư mục assets/css/style.css
+        -> trong thư mục assets tạo thêm thư mục img đồng cấp thư mục css
+        -> tạo file reset.css đồng cấp style.css
 
+- link đến file reset, style
+
+- Tạo base của dự án: 
+        
+        * {
+        box-sizing: border-box;
+        }
+
+        html {
+        font-size: 62.5%;
+        }
+
+        /* Khôi phục cỡ chữ lại thành mặc định theo rem */
+        body{
+        font-size: 1.6rem;
+        }
 
 
 
