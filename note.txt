@@ -1128,3 +1128,34 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
         -> thêm padding cho body để cách top
         -> thêm sticky cho header
 
+- phần hero: phần nổi bật của trang web (ngay đầu trang web)
+
+- ảnh thì lưu jpg, logo, icon thì svg
+
+- ảnh nổi trên ảnh -> dùng absolute để canh chỉnh
+
+- phân tích từ tổng quan đến chi tiết, từ bên ngoài đến bên trong, khối nào bọc phần nào
+
+- nút chuyển tab nên dùng thẻ a, nút bấm để bật video... dùng thẻ button
+
+- margin ko  đổ dc nền, padding đổ dc
+
+- object-fit: cover để ko vỡ ảnh
+
+- nên căn cho khối nhỏ phần bottom để khi thêm item nó sẽ nhảy lên trên
+
+- nên đặt tên biến cho tên font, color dùng nhiều
+
+- xem thẻ nằm trong khối nào và tên class gì
+
+
+
+
+
+
+
+
+
+
+
+
