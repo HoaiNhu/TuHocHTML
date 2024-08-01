@@ -1096,9 +1096,35 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
         font-size: 1.6rem;
         }
 
+- kiểm tra toàn bộ font chữ của dự án 
+        -> font tiêu đề (font 700...)
+        -> font nội dung văn bản (font 400 500 600 700..)
 
+- lên gg font lấy font
 
+- nhúng font vào header, paste tên font dô phần body bên style
 
+- phân tích header
 
-
+- tạo header
+        -> tạo thẻ header có class header và class fixed để dùng sticky neo header lại
+        -> trong <header> tạo class main-content để tái sử dụng độ rộng phần tử or các phần
+        -> tạo class body để bọc các phần trong header sau đó  xoay ngang lại
+        -> có button thì tạo class btn để tái sử dụng nút bấm, từng nút sẽ có class riêng
+        -> có ảnh thì lấy ảnh dạng svg để ko vỡ khi zoom
+        -> thêm style h100000 cho body để dãn ra dễ code
+        -> tạo nhóm common dùng chung cho tất cả các phần tử
+        -> code cho từng thẻ để căn phần tử
+        -> code cho main-content để xác định độ rộng trang web
+        -> còn lỗi khi thu nhỏ trang web thì phần tử sát lề -> dùng hàm calc
+        -> copy thuộc tính của nav -> bỏ thuộc tính dư thừa: font-family, font-style, font-weight, line-height(vì ko có có 2 dòng liền kề), text-align: center-> vì thẻ a là thẻ inline nên ko cần center
+        -> thêm padding dô nav để khi ng dùng di chuột gần đến thì đã click dc r -> vùng bấm to hơn và cx tách các nút ra
+        -> thêm hiệu ứng khi di chọn vào btn trong nav, thay font-weight = text-shadow để ko bị giật text xung quanh khi trỏ vào
+        -> thêm class active vào thẻ li để tạo hiệu ứng
+        -> thêm display: block cho thẻ after
+        -> dùng positon absolute để căn dấu gạch chân theo thẻ a
+        -> tạo nút làm tương tự như trên, chuyển thành thẻ inline-block để thêm padding (display -> padding -> line-height -> min-width)
+        -> căn giữa body = align-items
+        -> thêm padding cho body để cách top
+        -> thêm sticky cho header
 
