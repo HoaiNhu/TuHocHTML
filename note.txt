@@ -1148,13 +1148,43 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - xem thẻ nằm trong khối nào và tên class gì
 
+- code phần popular, vẫn dùng class main-content để dùng lại kích thước trang
 
+- vào thẳng svg để lấy code ảnh sau đó paste thay thế thẻ img
 
+-ng dùng di chuột vào đổi màu dùng hover
 
+- thêm hình bàn tay khi di chuột vào dùng cursor: pointer
 
+- gom nhóm thiết kế tối ưu nhất
 
+- kích vào ảnh/tên để chuyển tab -> bọc thẻ img = thẻ a
 
+- tối ưu popular: tránh việc nhập nội dung dài vỡ giao diện
+        -> đặt flex = 1: chia đều các khối
+        -> nội dung dài dùng ...
+        -> thêm vào common đoạn code sau tạo 1 dòng là ...
+        .line-clamp{
+        display: -webkit-box;
+        -webkit-line-clamp: var(--line-clamp, 1);
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        }
+        -> quá 2 dòng r ...
+        .line-clamp.line-2 {
+        --line-clamp: 2;
+        }
 
+        -> nhập link có từ quá dài, thêm class sau vào thẻ có nguy cơ bị vỡ UI
+        .break-all {
+        word-break: break-all;
+        }
+
+- thẻ blockquote: phù hợp dành trích dẫn 1 câu nói
+
+- các phần tử trong 1 container cách nhau dùng gap
+
+- thằng nào active gòi thì cursor = default
 
 
 
