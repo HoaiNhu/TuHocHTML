@@ -1186,6 +1186,18 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - thằng nào active gòi thì cursor = default
 
+- để nhảy ra ngoài 1 cấp dùng ^
+
+- chuyển nội dung ra giữa trục dọc 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+- hoặc align-content =center
+
+- ::before: dc xem như 1 thẻ con của thẻ container -> tác động dc df
+
+- muốn gạch chân mà dài theo chữ thì dùng display:inline-block cho thẻ cha, thẻ con ko set chiều dài cố định
 
 
 
