@@ -1199,5 +1199,6 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - muốn gạch chân mà dài theo chữ thì dùng display:inline-block cho thẻ cha, thẻ con ko set chiều dài cố định
 
+- gạch dưới chữ ko có border-radius thì dùng border vẽ là dc, còn có border-radius thì dùng before, after
 
-
+- thẻ inline thì ko margin top, bottom dc
