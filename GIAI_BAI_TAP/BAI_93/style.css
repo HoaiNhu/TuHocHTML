@@ -1,0 +1,56 @@
+/* beauty CSS */
+.box1,
+.box4,
+.box5 {
+  background: aqua;
+}
+
+.box2,
+.box3 {
+  background: blue;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  /* display: inline-grid; */
+  /* Giá trị mặc định của cột và hàng trong grid */
+  /* grid-template-columns: auto; */
+  /* grid-template-rows: auto; */
+  /* grid-template-columns: 100px 200px; */
+  /* grid-template-columns: 100px calc(100% - 100px); */
+  /* grid-template-rows: 50px 100px; */
+
+  /* khoảng hở các dòng */
+  /* grid-row-gap: 10px; */
+  /* khoảng hở các cột */
+  /* grid-column-gap: 20px; */
+
+  /* viết tắt */
+  /* gap: 10px; */
+
+  /* repeat */
+  /* grid-template-columns: 100px repeat(3, 50px); */
+  /* grid-template-rows: 50px repeat(4, 100px); */
+
+  /* chia hàng và cột theo trọng số */
+  /* grid-template-columns: 1fr 2fr; */
+  /* grid-template-rows: 1fr 2fr 3fr; */
+
+  /* giá trị auto */
+  /* grid-template-columns: 50px auto; */
+  /* ko áp dụng auto cho chia dòng */
+  /* grid-template-rows: 100px auto; */
+
+  /* minmax() */
+  grid-template-columns: minmax(100px, 300px) minmax(200px, auto);
+  grid-template-rows: repeat(2, minmax(50px, 80px));
+
+  /* grid-auto-row */
+  grid-auto-rows: 50px;
+}

@@ -1202,3 +1202,53 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 - gạch dưới chữ ko có border-radius thì dùng border vẽ là dc, còn có border-radius thì dùng before, after
 
 - thẻ inline thì ko margin top, bottom dc
+
+//GRID CSS--------------------------------------------------------------------
+
+- grid CSS
+        -> là 1 phương pháp sắp xếp và cấu trúc trang web dựa trên lưới
+        -> cho phép chia trang thành các ô hình và điều khiển vị trí các phần tử trên trang
+
+- grid có:
+        - grid line: các đường kẻ
+        - grid cell: là có ô vuông 
+        - grid track: là các ô theo chiều ngang(row) theo chiều dọc(column)
+        - grid area: tập hợp nhiều grid cell hình chữ nhật
+
+- flexbox: 1 CHIỀU (ngang /dọc) -> có sẽ bị xê dịch
+
+- grid: 2 chiều -> co nhỏ thì sẽ ngay hàng thẳng lối
+        -> kết hợp cả 2
+
+- cách sử dụng grid: 
+        -> đặt tất cả phần tử con vào class bên ngoài (container)
+        -> khi đặt class cha là grid or inline-grid thì tất cả phần tử rời khỏi luồng thông thường và tuân theo quy tắt lưới của grid
+        -> giống thẻ block
+        -> mặc định 1 hàng và 1 cột 
+        -> grid-template-columns/row
+                > grid-template-columns: auto;
+                  grid-template-rows: auto;
+                -> ko xét thì chiều cao/rộng sẽ vừa với nội dung bên trong 
+        -> chia cột thì nhập độ rộng từng cột vào
+        -> dùng dc độ dài tuyệt đối, %, em, rem, calc()...
+
+- gap: là khoản hở giữa các dòng và CỘT
+        -> grid-row-gap: khoảng hở các Dòng
+        -> grid-column-gap: khoảng hở các cột
+        -> viết gọn: gap: row-gap columns-gap. vd:gap: 5px 10px
+                -> nhập 1 đối số để áp dụng cho cả dòng và cột
+
+- repeat(): dùng trong trường hợp có nhiều giá trị lặp lại
+        -> repeat(<số lần lặp>, <giá trị lặp>)
+
+- fr: chia hàng và cột theo trọng số
+        -> vd grid-template-row: 1fr 2fr;
+
+- dùng auto để chia cột 
+        -> ko áp dụng auto cho chia dòng
+
+- sử dụng minmax(): giới hạn kích thước phần từ nằm trong dải nào đó để ko lm vỡ giao diện
+        ->grid-template-row: minmax(50px, 100px): dãn tối đa 100px, co tối đa đến 50px
+
+- grid-auto-row: chỉ định chiều cao dòng mặc định
+        -> tất cả những row ko chỉ định rõ chiều cao sẽ tuân theo chiều cao mặc định row này 
