@@ -1,0 +1,33 @@
+/* beauty CSS */
+.box1,
+.box4,
+.box5 {
+  background: aqua;
+}
+
+.box2,
+.box3 {
+  background: blue;
+}
+
+.box {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.container {
+  display: grid;
+  gap: 2px;
+  /* mặc định hướng các item là row */
+  /* grid-auto-flow: row; */
+  /* số cột mặc định là 1 nên cần chỉ định số cột */
+  /* grid-template-columns: repeat(5, 100px); */
+
+/* chuyển hướng sang column */
+grid-auto-flow: column;
+
+grid-template-rows: repeat(5,100px);
+}
