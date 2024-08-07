@@ -47,7 +47,7 @@
 //css counter: tạo bộ đếm, đánh dấu phần thư mục: https://www.w3schools.com/CSS/css_counters.asp
 //css flexbox csstrick: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 //css grid: tạo lưới grid: https://game.tuhoc.cc/css-grid-generator/
-
+//html sematic: thẻ có ngữ nghĩa: https://developer.mozilla.org/en-US/docs/Glossary/Semantics
 
 
 
@@ -1346,3 +1346,67 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
         -> = column: thêm item tới hết row xong sẽ nhảy qua column khác
                 - vd: 135
                       24
+                
+- auto-fill, auto-fit: dùng để xác định cách grid items (phần tử bên trong grid) đc tự động xếp trong grid container khi ko có đủ vị trí (dc xác định trc) khi co/phóng trình duyệt
+        -> auto-fill: tự động thêm các ô trống ở cuối nếu trình duyệt có đủ chổ, co lại thì các ô trống này nhỏ lại
+                ->   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        -> auto-fit: khi màn hình đủ lớn, sẽ tự động lắp đầy
+
+//--BEM----------------------------------------------------------
+
+- BEM: viết tắt của block, element, modifier là 1 pp đặt tên và quản lí CSS
+
+        -> block: các khối độc lập
+                -vd: header, navigation, menu, footer...
+
+        -> element: có thể coi element là phần tử con của block, element dc gắn về mặt ngữ nghĩa vs block của nó
+                -vd: title, description, image...
+                - cách đặt tên: block__element: header__title, card__image...
+
+        -> modifier: là thành phần dùng để bổ sung nghĩa cho block or element
+                -vd: checked, disabled, small, red, signIn, signUp...
+                - cách đặt tên: 
+                        + block__element--modifier: header__title--primary, block--
+                        + block--modifier: modal--custom, modal-fullscreen...
+
+        -> nếu tên có từ 2 từ trở lên thì dùng -
+                -vd: card-list__button
+
+- BEM ko có mục đích phản ảnh cấu trúc lồng nhau của các block, các element
+        - giả sử: 1 blocks chứa element 1, element1 chứa element 2, element 2 chứa element 3
+        - ko đặt block__ele1__ele2 mà chỉ cần block_ele2
+
+//----------------------------------------------------------------
+
+- thẻ có ngữ nghĩa: 
+        -> giúp trình đọc máy, trình phân tich website hiểu dc cấu trúc trang web
+        -> giúp tối ưu hóa cho công cụ tìm khiếm
+        -> tạo cấu trúc mạch lạc, dễ đọc đối với cả lập trình viên
+
+- Một số thẻ có ngữ nghĩa
+        1. <header>: phần đầu trang web, or 1 vùng chứa nội dung giới thiệu
+        2. <nav>: đánh dấu phần chứa menu điều hướng or link đến các trang con trong trang web
+        3. <main>: chỉ ra nội dung 9 của trang web, thường nội dung 9 của trang
+        4. <footer>: phần chân trang, thường chứa nội dung bản quyền, liên hệ, các liên kết khác...
+        5. <figure>:  Dùng để bọc hình ảnh, biểu đồ, video… khi chúng bổ nghĩa cho thành phần nội dung.
+        6. <figcaption>: dung để mô tả cho phần tử figure
+        7. <mark>: Làm nổi bật (highlight) một phần của văn bản.
+        8. <aside>: Các thông tin bên lề: Ví dụ: Quảng cáo, sản phẩm liên quan…
+        9. <article>: Chỉ định nội dung độc lập, khép kín: Bài đăng, thẻ sản phẩm. Đầy đủ nội dung 
+        10. <section>: Được sử dụng để chia nội dung trang thành các phần khác nhau. Phần nhỏ trong nội dung
+        11. <time>: chỉ giờ
+        12. <summary>: tóm tắt phần tử trong thẻ <detail>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
