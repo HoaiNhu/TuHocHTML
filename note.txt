@@ -1413,7 +1413,17 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - khi active nếu chữ to lên làm kích thước bị giật thì thay = text-shadow
 
+- dùng thẻ section để bọc phần hero lại vì nó là thông tin nổi bật
 
+- section or article thì cần có tiêu đề nhưng article có thể bê đi bất cứ đâu dc, còn section chỉ bổ nghĩa
+
+- 2 thẻ kế nhau có khoảng cách nho nhỏ -> tác động vào thẻ cha df
+
+- flex = 1 để chiếm hết khoảng ko gian còn lại
+
+- để dồn ảnh qua phải dùng jc:flex-end
+
+- để ảnh lớn chông lên ảnh nhỏ dùng mright, z-index để đổi vị trí ảnh lớn sau ảnh nhỏ 
 
 
 
