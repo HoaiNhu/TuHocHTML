@@ -1397,9 +1397,21 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
         11. <time>: chỉ giờ
         12. <summary>: tóm tắt phần tử trong thẻ <detail>
 
+//Project-3-----------------------------------------------------
 
+- add favicon: 
+        -> tải ảnh png-
+        -> đưa ảnh vào link tạo favicon
+        -> tải zip, bỏ vào folder favicon, giải nén
+        -> lấy link html bỏ vào header
+        -> sửa link href ./assets/favicon
+        -> vào manifest.json -> chọn src (ctrl shift A L) -> thêm /assets/favicon/ sau "
 
+- tạo header, tạo class container để tái sử dụng chiều rộng cho các phần
 
+- để co nhỏ trình duyệt header ko bị sát lề thì dùng max-width: calc(100% - 48px)
+
+- khi active nếu chữ to lên làm kích thước bị giật thì thay = text-shadow
 
 
 
