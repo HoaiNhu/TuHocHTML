@@ -1439,6 +1439,12 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - transition: để điều chỉnh thời gian chuyển đổi
 
+- bật grid trên figma mà thấy item nằm gọn trong các grid thì nên dùng grid
+
+- border-color: đổi màu border
+
+- để item dịch lên dịch xuống dùng   transform: translateY(-16px);
+
 
 
 
