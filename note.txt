@@ -1425,6 +1425,20 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - để ảnh lớn chông lên ảnh nhỏ dùng mright, z-index để đổi vị trí ảnh lớn sau ảnh nhỏ 
 
+- tạo thẻ main, code từng phần, dùng class container trong từng phần để tái sử dụng kích thước 1170px
+
+- khi giới hạn độ rộng thì thẻ block ko còn nằm giữa trình duyệt nx nên sẽ phải thêm margin:0 auto;
+
+- ko giới hạn chiều cao của thẻ cái răng để thêm nội dung thì nó sẽ dãn ra
+
+- position:relative : lôi item ra khỏi luồng thông thường, khi hover vào nó sẽ ko bị dính vào item khác
+
+-sửa fill thành CurrentColor
+
+- .service-item:hover .service-item__icon: khi hover vào item thì tác động vào icon
+
+- transition: để điều chỉnh thời gian chuyển đổi
+
 
 
 
