@@ -1445,6 +1445,12 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - để item dịch lên dịch xuống dùng   transform: translateY(-16px);
 
+- có nội dung thì bọc = thẻ section
+
+- nếu 2 khối sát quá thì vừa margin vừa padding
+
+- xóa phần thừa xuống dưới của ảnh khi thẻ inline chừa cho các chữ có đuôi dài dùng display: flex
+
 
 
 
