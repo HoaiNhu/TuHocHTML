@@ -48,7 +48,7 @@
 //css flexbox csstrick: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 //css grid: tạo lưới grid: https://game.tuhoc.cc/css-grid-generator/
 //html sematic: thẻ có ngữ nghĩa: https://developer.mozilla.org/en-US/docs/Glossary/Semantics
-
+//tailwind css: làm css nhanh: https://tailwindcss.com/
 
 
 //shift + 1 + tap để tạo cấu trúc file html
