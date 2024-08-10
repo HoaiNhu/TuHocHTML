@@ -1451,6 +1451,14 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - xóa phần thừa xuống dưới của ảnh khi thẻ inline chừa cho các chữ có đuôi dài dùng display: flex
 
+- có thể dùng css để lm bg cho ảnh
+
+- ảnh nhỏ thì có thể 2x cho nét
+
+- ảnh max-width 100% tự động căn tỉ lệ
+
+- xoay chiều 180 độ dùng rotate: 180deg;
+
 
 
 
