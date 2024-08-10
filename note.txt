@@ -1459,6 +1459,10 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - xoay chiều 180 độ dùng rotate: 180deg;
 
+- để kéo gạch chân gạch qua chân chữ có đuôi dùng : text-underline-offset: 5px;
+
+- giới hạn chiều cao của thẻ figure và overflow hidden để khi tranform ảnh bự lên thì ko bị đè lên nội dung
+
 
 
 
