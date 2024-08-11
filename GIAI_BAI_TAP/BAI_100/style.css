@@ -1,0 +1,44 @@
+.box {
+  background: blue;
+  width: 300px;
+  height: 300px;
+}
+
+/* max-width: với chiều rộng tối đa là bnhiu thì áp dụng (từ đó trở xuống) e này */
+/* @media (max-width: 600px) {
+  .box {
+    background: pink;
+    width: 200px;
+    height: 200px;
+  }
+} */
+
+/* @media print {
+  .box {
+    background: red;
+  }
+} */
+/* min-width: tối thiểu bnhiu thì áp dụng từ đó trở lên */
+@media (min-width: 1000px) {
+  .box {
+    background: #000;
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px), (min-width: 1000px) {
+  .box {
+    background: cyan;
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (orientation: landscape) {
+  .box {
+    background: greenyellow;
+    width: 400px;
+    height: 200px;
+  }
+}

@@ -49,6 +49,18 @@
 //css grid: tạo lưới grid: https://game.tuhoc.cc/css-grid-generator/
 //html sematic: thẻ có ngữ nghĩa: https://developer.mozilla.org/en-US/docs/Glossary/Semantics
 //tailwind css: làm css nhanh: https://tailwindcss.com/
+//bootstrap: framework mã nguồn mã dc thiết kế sẵn: https://getbootstrap.com/
+//media query mozilla: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+
+
+
+
+
+
+
+
+
 
 
 //shift + 1 + tap để tạo cấu trúc file html
@@ -1469,9 +1481,69 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
         font-size: inherit;
         }
 
+//Responsive web design--------------------------------------------
 
+- Responsive web des: thiết kế web linh hoạt: dùng chung source, tùy vào size screen thì sẽ cho viewport khác nhau
+- adaptive web des: thiết kế web thích ứng: mỗi size screen có source khác nhau
+- Ngày nay có rất nhiều size màn hình khác nhau         
+        -> yêu cầu trang web hiển thị trên tất cả chúng 
+        -> việc tạo ra trang web có khả năng phản hồi (Responsive) ko chỉ là xu hướng mà còn là yêu cầu
 
+        ---> Responsive giúp trình duyệt hiển thị theo viewport của khách hàng như điện thoại/ máy tính...
 
+- So sánh: 
+1. Khái Niệm (Concept)
+      -  Responsive Web Design (RWD): Dựa trên kích thước màn hình, linh hoạt thay đổi chi tiết để phù hợp với từng kích cỡ màn hình khác nhau.
+      -  Adaptive Web Design (AWD): Tập trung vào việc tối ưu hóa thông tin hiển thị cho từng loại thiết bị cụ thể và chú trọng vào biểu mẫu sẽ xuất hiện như thế nào trên từng thiết bị đó.
+2. Phương Pháp (Method)
+      -  RWD: Sử dụng Media Queries để thiết lập các điểm ngắt để bố cục có thể thay đổi.
+      -  AWD: Làm riêng từng bản bố cục cho các loại thiết bị khác nhau và áp dụng.
+3. Bố Cục (Layout)
+      -  RWD: Một bố cục chung cho mọi thiết bị.
+      -  AWD: Làm riêng từng bố cục cho từng thiết bị.
+4. Tải Trang (Resources)
+      -  RWD: Tài nguyên web nặng, ảnh hưởng tới tốc độ tải trang.
+      -  AWD: Chỉ gửi nội dung cần thiết cho thiết bị đó để giảm tải.
+5. Hiệu Suất Trang Web (Web Page Performance)
+      -  RWD: Hiệu suất có thể giảm khi phải xử lý nhiều nội dung không cần thiết.
+      -  AWD: Giảm tải trang có thể cải thiện hiệu suất.
+6. Quản Lý Nội Dung (Content Management)
+      -  RWD: Dễ dàng quản lý vì chỉ có một phiên bản nội dung.
+      -  AWD: Cần quản lý nhiều phiên bản của trang web, mất nhiều thời gian và chi phí.
+7. Thời Gian Phát Triển (Development Time)
+      -  Responsive Web Design (RWD): Thời gian phát triển nhanh hơn do sử dụng một bộ mã nguồn cho tất cả các thiết bị.
+      -  Adaptive Web Design (AWD): Thời gian phát triển lâu hơn do phải tạo nhiều bộ mã nguồn riêng cho từng thiết bị. Khi cập nhật, cũng phải cập nhật các bộ mã riêng cho từng thiết bị.
 
+//Media query-------------------------------------------------------
 
+- media query: thg dùng để tùy chỉnh css vs các break point dc chỉ định
+- khi thỏa mãn điều kiện css trong khối @media sẽ dc thực thi và ghi đè css mặc định vốn có
 
+- cú pháp :
+        @media (điều kiện)
+        {
+                khối lệnh thực thi khi điều kiện đúng
+        }
+
+- /* max-width: với chiều rộng tối đa là bnhiu thì áp dụng (từ đó trở xuống) e này */
+- /* min-width: tối thiểu bnhiu thì áp dụng từ đó trở lên */
+- điều kiện kết hợp dùng and: ví dụ min 600 max 1000 thì đoạn từ 600 đến 1000 sẽ áp dụng
+- điều kiện , : lấy cả 2 đoạn
+
+- áp dụng khi màn hình xoay ngang dùng : orientation : landscape
+- áp dụng khi xoay dọc là portrait
+
+-   <!-- 
+[yellow] Thiết bị di động: 319px — 480px
+[chocolate] iPads và máy tính bảng: 481px — 1200px
+[green] Laptop: 1201px — 1600px
+[purple] Máy tính để bàn: 1601px trở lên
+-->
+
+- break point: theo lý thuyết sẽ cách nhau 1px
+        -> trong tình huống mà viewport dừng đúng khoảng này 
+        -> css sẽ ko hoạt động như mong muốn -> -0,02 để thu hẹp vùng giao thoa. vd max-width: 480,98px
+
+- Mở web trên điện thoại lun
+        1. cmd --> ipconfig --> lấy Ipv4
+        2. lấy điện thoại bắt wifi cùng rooter vs PC
