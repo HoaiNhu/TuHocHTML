@@ -1463,6 +1463,11 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 
 - giới hạn chiều cao của thẻ figure và overflow hidden để khi tranform ảnh bự lên thì ko bị đè lên nội dung
 
+- những thẻ sau sẽ ko ăn theo font của thẻ cha mà ăn theo trình duyệt vì thế phải kế thừa chúng ở phần common
+        input, textarea, select, button{
+        font-family: inherit;
+        font-size: inherit;
+        }
 
 
 
