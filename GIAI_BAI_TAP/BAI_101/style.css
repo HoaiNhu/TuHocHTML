@@ -1,0 +1,15 @@
+.blog {
+  background: cyan;
+}
+
+/* - Hàm min: chọn giá trị nhỏ nhất (âm nhất) trong danh sách giá trị ngăn cách nhau bởi dấu phẩy
+        -> min(<value-list>); */
+
+ /* - Hàm max: chọn giá trị lớn nhất (dương nhất) trong danh sách giá trị ngăn cách nhau bởi dấu phẩy, giá trị nào lớn hơn so với cái size hiện tại thì dùng
+        -> max(<value-list>); */
+.blog {
+  /* width: min(800px, 100%); */
+  /* width: max(800px, 100%); */
+  width: clamp(300px, 100% ,1170px);
+  font-size: clamp(18px, 2vw, 24px);
+}

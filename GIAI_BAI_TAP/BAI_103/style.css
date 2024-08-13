@@ -1,0 +1,42 @@
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  background: pink;
+  color: red;
+  font-size: 3rem;
+  /* transition: 1s; */
+
+  /* 1. rotate */
+  /* transform: rotate(45deg); */
+  /* rotate: 45deg; */
+
+  /* 2. scale */
+  /* transform: scale(1.5);
+  transform: scale(1.5, 0.5);
+  scale: 1.5; */
+
+  /* 3.skew */
+  /* nghiêng cạnh trái, cạnh phải */
+  /* theo chiều X */
+  /* transform: skewX(30deg); */
+  /* transform: skew(30deg, 10deg); */
+  /* transform: skewY(30deg); */
+
+  /* 4.translate */
+  /* dịch theo X cách 1 */
+  /* transform: translateX(100px); */
+  /* transform: translate(100px); */
+  /* transform: translateY(100px); */
+  /* transform: translateY(-20%); */
+  /* transform: translate(100px, 50px); */
+
+  /* translate: 100px -50%; */
+
+  /* 5. kết hợp */
+  transform: scale(2) rotate(45deg) ;
+}
+
+/* .box:hover {
+  transform: rotate(45deg);
+} */

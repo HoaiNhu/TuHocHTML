@@ -1547,3 +1547,68 @@ vì vậy các phần tử khác trong web vẫn có thể bị che khuất bở
 - Mở web trên điện thoại lun
         1. cmd --> ipconfig --> lấy Ipv4
         2. lấy điện thoại bắt wifi cùng rooter vs PC
+
+//Bài 101====================================================================
+
+- Hàm min: chọn giá trị nhỏ nhất (âm nhất) trong danh sách giá trị ngăn cách nhau bởi dấu phẩy, giá trị nào nhỏ hơn so với cái size hiện tại thì dùng
+        -> min(<value-list>);
+
+- - Hàm max: chọn giá trị lớn nhất (dương nhất) trong danh sách giá trị ngăn cách nhau bởi dấu phẩy, giá trị nào lớn hơn so với cái size hiện tại thì dùng
+        -> max(<value-list>);
+
+- hàm clamp: kẹp 1 giá trị giữa giới hạn trên và giới hạn dưới, dựa trên giá trị lý tưởng đã đặt
+        -> clamp(<min>, <ideal>, <max>)
+        ->giá trị ở giữa là giá trị ưu tiên áp dụng. còn nếu chạm đến min sẽ áp dụng min, chạm đến max sẽ áp dụng max
+
+//Bài 102========================================================================
+
+- transition: cho phép kiểm soát thời gian chuyển tiếp của 1 phần tử từ trạng thái này sang trang thái khác với hiệu ứng mượt mà
+
+- thuộc tính
+        1. transition-property
+                Ý nghĩa: Xác định thuộc tính CSS sẽ được transition (để all hoặc không nhập gì để hiểu là áp dụng cho tất cả)
+                Ví dụ: width, height, opacity
+        2. transition-duration (bắt buộc có)
+                Ý nghĩa: Transition từ trạng thái A -> B mất bao lâu
+                Ví dụ: 1s (1 giây), 500ms (500 mili giây)
+        3.  transition-timing-function
+                Ý nghĩa: Xác định cách thay đổi của thuộc tính theo thời gian, thay đổi thời gian từng đoạn trong tổng thời gian, ví dụ nhanh xong châm... nhưng tổng time vẫn ko đổi
+                Ví dụ: ease, linear, ease-in, ease-out
+        4.  transition-delay
+                Ý nghĩa: Xác định thời gian trễ trước khi Transition bắt đầu
+                Ví dụ: 0.5s (0.5 giây)
+
+- ko nên lạm dụng all để giảm tải dung lượng cho trang web, nếu cần biến đổi thuộc tính nào nên liệt kê thuộc tính đó ra
+        -> tối ưu hóa hiệu suất trang web
+- viết tắt: 
+        transition: <property> <timing-function> <duration> <delay>;
+        --> duration luôn ở phía trc delay, timing, property bỏ đâu cx dc
+
+- Notice: 
+        1. ko phải thuộc tính nào cũng hổ trợ transition, Animations
+                -> ví dụ :display: none
+        2. ko nên áp dụng transition và Animations vào hover và active
+
+//Bài 103=============================================================
+
+- transform cho phép chúng ta thay đổi kích thước, hình dạng, vị trí của các phần tử trên trang web
+        1. rotate(<độ>deg): xoay phần tử (gõ tắt rotate())
+        2. scale(): co giãn phần tử theo chiều ngang và chiều dọc
+                -> nhập 1 đối số thì co giãn 2 CHIỀU
+                -> nhập 2 đối số scale (chiều x, chiều y)
+        3. skew(): biến dạng: sử dụng để nghiêng phần tử theo 2 chiều
+        4. translate(): dịch chuyển 1 phần tử theo chiều ngang và chiều dọc
+
+- notice:
+        1. có thể kết hợp nhiều thuộc tính vs nhau, mỗi hàm cách nhau bỏi dấu cách
+        2. transform ko đẩy dc các phần tử xung quanh (nó có thể đè lên phần tử)
+        3. có thể cần thêm prefix nếu dùng cho các trình duyệt cũ
+
+//Bài 104=============================================
+
+- xoay nền mà ko xoay chữ
+        1. cho khối chứ chữ position: relative
+        2. dùng before cho khối con position:absolute
+        3. before phải có content
+        4. dô https://game.tuhoc.cc/9/gradient-css-generator.html làm nền
+        5. nền che chữ dùng z-index
