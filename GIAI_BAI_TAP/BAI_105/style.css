@@ -1,0 +1,104 @@
+button {
+  display: flex;
+  margin: 30px;
+  outline: none;
+  border: none;
+}
+
+.btn {
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: 600px;
+  border-radius: 99px;
+  color: #fff;
+  background: rgb(90, 13, 192);
+  transition: 0.5s;
+}
+
+/* thay đổi vị trí */
+
+.btn-1:hover {
+  /* transform: translate(0, -15px); */
+  translate: 0 -15px;
+}
+
+/* chuyển bg */
+.btn-2:hover {
+  background: blue;
+}
+
+/* chuyển màu nền từ trái qua phải */
+.btn-3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn__span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #000;
+  transition: width 0.5s linear;
+}
+
+.btn-3:hover::after {
+  width: 100%;
+}
+
+/* chuyển màu và chạy tiếp */
+
+.btn-4 {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  /* nhả tay ra thì chuyển qua căn phải w từ 100% thụt về 0 */
+  right: 0;
+  bottom: 0;
+  width: 0;
+  background: #000;
+  transition: width 0.5s linear;
+}
+
+/* khi hover vào thì căn theo cạnh trái độ rộng tăng từ 0 lên 100% */
+.btn-4:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* chạy từ trên xuống dưới và chạy tiếp */
+.btn-5 {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* nhả tay ra thì chuyển qua căn phải w từ 100% thụt về 0 */
+  right: 0;
+  bottom: 0;
+  height: 0;
+  background: #000;
+  transition: height 0.5s linear;
+}
+
+/* khi hover vào thì căn theo cạnh trái độ rộng tăng từ 0 lên 100% */
+.btn-5:hover::after {
+  top: 0;
+  height: 100%;
+}
