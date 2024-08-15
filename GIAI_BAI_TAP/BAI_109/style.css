@@ -1,0 +1,49 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* bos shadow */
+img {
+  /* box-shadow: 0 0 20px black; */
+}
+
+/* drop shadow */
+img {
+  /* filter: drop-shadow(0 0 20px black); */
+}
+
+.chat {
+  font-size: 1.2rem;
+  -webkit-filter: drop-shadow(0 0 2px black);
+  filter: drop-shadow(0 0 2px black);
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 300px;
+  position: relative;
+}
+
+.chat::after {
+  position: absolute;
+  content: "";
+  border: 20px solid;
+  border-color: #fff transparent transparent;
+  right: 5%;
+  bottom: -39px;
+}
+
+/* icon */
+.icon:hover {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(82%) saturate(6926%)
+    hue-rotate(269deg) brightness(81%) contrast(96%);
+}
+
+/*  */
+
+img {
+  filter: hue-rotate(20deg);
+  max-width: 200px;
+}

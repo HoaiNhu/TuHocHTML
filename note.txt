@@ -54,7 +54,7 @@
 //xem animation: https://uiverse.io/
 //thư viện aos: tạo transition khi ng dùng lăn chuột gần đến gần tử: https://github.com/michalsnik/aos?tab=readme-ov-file
 //thư viện animate: https://animate.style/
-
+//filter css: https://www.w3schools.com/cssref/css3_pr_filter.php
 
 
 
@@ -1829,3 +1829,21 @@ mặc định :false
 - thư viện animate: sử dụng khi muốn animation hoạt động lặp lại nhiều lần trên trang
         -> nhược điểm là animattion sẽ diễn ra ngay khi ng dùng truy cập -> có thể tùy chỉnh bằng tất cả thuộc tính animation đã học
         -> để kích hoạt khi ng dùng scroll chuột -> kết hợp vs thư viện aos
+
+//Bài 108========================================================
+
+- dùng aos + animate
+        1. thêm link cdn aos và animate vào header
+        2. thêm AOS.init 
+        3. sửa className của AOS.init thành animate__animated
+        4. lấy tên animate thêm vào phần data-aos="<tên animate>";
+
+//Bài 109==========================================================
+
+- filter: 
+        -> dùng để tạo bóng đổ xung quanh phần tử 
+        -> làm bong bóng chat
+        -> đổi màu icon
+        -> dùng hàm hue-rotate để đổi màu theo góc quay
+
+- drop shadow: giúp tạo bóng đổ xung quanh phần tử mà ko đổ vào vùng nền trong suốt
