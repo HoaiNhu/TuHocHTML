@@ -52,8 +52,8 @@
 //bootstrap: framework mã nguồn mã dc thiết kế sẵn: https://getbootstrap.com/
 //media query mozilla: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
 //xem animation: https://uiverse.io/
-
-
+//thư viện aos: tạo transition khi ng dùng lăn chuột gần đến gần tử: https://github.com/michalsnik/aos?tab=readme-ov-file
+//thư viện animate: https://animate.style/
 
 
 
@@ -1785,3 +1785,47 @@ fill-model                      xác định vị trí của phần tử sau khi
    +-------------+
    2             1
 (-100px, 0)     (0, 0)
+
+//Bài 107========================================================
+
+- thư viện AOS: 
+        -> mục đích sử dụng: khi muốn dùng hiệu ứng transition khi ng dùng cuộn chuột tới phần tử
+
+- phần tử:
+
+1. data-aos-offset=“200”
+Mô tả: cuộn qua mép trên của phẩn tử 200px thì kích hoạt hiệu ứng
+Ghi chú: Default: 120px
+
+2. data-aos-duration=“1000”
+Mô tả: Điều chỉnh thời gian của animation 
+Ghi chú: chấp nhận giá trị từ 50ms -> 3000ms
+
+3. data-aos-delay=“50”
+Mô tả: Thiết lập thời gian trễ trước khi hiệu ứng animation bắt đầu
+Ghi chú: Default: 0ms
+
+4. data-aos-anchor-placement=“top-bottom”
+Mô tả: Định vị trí kích hoạt hiệu ứng dựa vào vị trí của phần tử mục tiêu và cửa sổ duyệt
+        -> top: cạnh trên phần tử chạm cạnh dưới trình duyệt (bottom) thì kích hoạt hiệu ứng
+Ghi chú: Default: top-bottom
+
+5. data-aos-anchor=“#id-selector”
+Mô tả: Chọn selector để kích hoạt hiệu ứng dựa vào selector có id-selector được khai báo
+Ghi chú:
+
+6. data-aos-easing=“linear”
+Mô tả: Điều chỉnh cách mà animation diễn ra từ lúc bắt đầu cho đến khi kết thúc
+default: ease
+
+7. data-aos-once=“true”
+Mô tả: Nếu thiết lập là true, hiệu ứng chỉ diễn ra một lần
+- mặc định: false
+
+8. data-aos-mirror = "true"
+mô tả: cho phép animation hoạt động khi cuộn ngc từ dưới lên
+mặc định :false
+
+- thư viện animate: sử dụng khi muốn animation hoạt động lặp lại nhiều lần trên trang
+        -> nhược điểm là animattion sẽ diễn ra ngay khi ng dùng truy cập -> có thể tùy chỉnh bằng tất cả thuộc tính animation đã học
+        -> để kích hoạt khi ng dùng scroll chuột -> kết hợp vs thư viện aos
