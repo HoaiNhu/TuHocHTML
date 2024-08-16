@@ -1889,3 +1889,20 @@ mặc định :false
 - radio: cho phép chọn 1 lựa chọn duy nhất
         -> phải đặt name giống nhau ở các lựa chọn -> để chọn 1 
         -> nếu đặt khác thì sẽ chọn dc hết -> ko sao nhưng dễ bị nhầm sau khi xử lí dữ liệu
+
+//Bài 112============================================================
+
+- type = submit: khi bn muốn gửi biểu mẫu đến máy chủ khi ng dùng ấn nút này
+
+- type = button: mặc định ko gửi dữ liệu biểu mẫu, thường sử dụng vs JS để thực hiện 1 hành động nào đó
+        -> có thể link động dùng thêm thẻ button: để + vs các phần tử html bên trong
+        -> button type mặc định vẫn là submit nên có thể dùng thẻ button thay cho type button
+- type = reset: xóa all giá trị của form và đưa chúng về trạng thái ban đầu
+
+//Bài 113============================================================
+
+- range: dùng để đặt phạm vi min max
+        - default: từ 0 -> 100, step = 1
+        - value: để đặt giá trị khi ng dùng vừa truy cập vào web, sẽ nhảy theo giá trị gần nhất theo step
+
+- number: hiển thị số thay vì kéo như range
