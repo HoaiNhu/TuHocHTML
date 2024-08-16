@@ -55,7 +55,7 @@
 //thư viện aos: tạo transition khi ng dùng lăn chuột gần đến gần tử: https://github.com/michalsnik/aos?tab=readme-ov-file
 //thư viện animate: https://animate.style/
 //filter css: https://www.w3schools.com/cssref/css3_pr_filter.php
-
+//html form: thẻ form để nhập liệu: https://www.w3schools.com/tags/tag_form.asp
 
 
 
@@ -1847,3 +1847,37 @@ mặc định :false
         -> dùng hàm hue-rotate để đổi màu theo góc quay
 
 - drop shadow: giúp tạo bóng đổ xung quanh phần tử mà ko đổ vào vùng nền trong suốt
+
+//Bài 110============================================================
+
+- html form: <form>: là 1 thẻ tạo hiệu ứng biểu mẫu trên trang web cho phép ng dùng nhập dữ liệu và gửi thông tin tới máy chủ
+
+- form input: <input>: là 1 thẻ dùng để dùng để tạo 1 biểu mẫu trên trang web cho phép ng dùng nhập dữ liệu
+
+- gõ input:text -> thẻ input kiểu loại text
+
+- placeholder: để gợi ý trong thẻ input
+
+- muốn gợi ý ở trên thì thêm thẻ label trên thẻ input
+
+- for trong label có thể gán id của input để gán cái label cho thẻ input đó
+
+- các thuộc tính của form: 
+
+        1.  id
+        Attribute trong thẻ input, là định danh duy nhất của mỗi ô nhập liệu để dễ dàng xác định phần tử trên trang web.
+        
+        2.   name
+        Giúp xác định các trường nhập liệu để khi biểu mẫu được gửi đi, thông tin được gửi đi cùng với giá trị của chúng dưới dạng cặp tên/giá trị.
+        
+        3.   value
+        Được sử dụng để đặt giá trị mặc định cho ô nhập liệu khi nó hiển thị lần đầu tiên và không được người dùng nhập vào giá trị mới cho một ô nhập liệu cho người dùng.
+        
+        4.   placeholder
+        Hiển thị văn bản gợi ý trong ô nhập liệu.
+        
+        5.    required
+        Trường này phải được điền vào trước khi biểu mẫu được gửi đi.
+        
+        6.   autocomplete=“off”
+        Trình duyệt sẽ không tự động hoàn tất các giá trị đã từng được nhập vào trong trường đó. ko gợi ý các giá trị đã nhập
