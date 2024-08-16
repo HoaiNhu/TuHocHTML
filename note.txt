@@ -1881,3 +1881,11 @@ mặc định :false
         
         6.   autocomplete=“off”
         Trình duyệt sẽ không tự động hoàn tất các giá trị đã từng được nhập vào trong trường đó. ko gợi ý các giá trị đã nhập
+        
+//Bài 111============================================================
+
+- checkbox: cho phép chọn nhiều lựa chọn cùng lúc
+
+- radio: cho phép chọn 1 lựa chọn duy nhất
+        -> phải đặt name giống nhau ở các lựa chọn -> để chọn 1 
+        -> nếu đặt khác thì sẽ chọn dc hết -> ko sao nhưng dễ bị nhầm sau khi xử lí dữ liệu
