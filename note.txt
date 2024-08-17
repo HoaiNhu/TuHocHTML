@@ -1920,7 +1920,7 @@ mặc định :false
 -> ví dụ: https://www.youtube.com/results?search_query
         -> name = search_query
 
-//Bài 114============================================================
+//Bài 115============================================================
 
 - textarea: là 1 thẻ trong form dc sử dụng để tạo ra 1 ô văn bản cho phép ng dùng nhập nhiều dòng văn bản
         -> thêm cols và row -> chỉ định số cột và dòng
@@ -1935,7 +1935,7 @@ mặc định :false
         -> muốn gom nhóm thì dùng thẻ <optgroup label="tên nhóm"> trong thẻ select
 
 
-//Bài 114============================================================
+//Bài 116============================================================
 
 - font chữ trong form sẽ sử dụng mặc định theo trình duyệt, cần can thiệp để tùy chỉnh
 
@@ -1950,7 +1950,7 @@ button {
   font-family: inherit;
 }
 
-//Bài 114============================================================
+//Bài 117============================================================
 
 - Một số kiến thức thường dùng trong form
 
@@ -1963,3 +1963,176 @@ button {
 
 -form legend: tạo form có viền và có text trên đầu đè lên viền
         -> bọc các input = fieldset, dưới fieldset thêm thẻ legend để nhập tên bảng
+
+//Bài 118 =======================================================
+
+- custom checkbox
+/* bỏ user select khi click vào label */
+label {
+  user-select: none;
+}
+
+.checkbox-group label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* tạo before và after của label */
+.checkbox-group label::after,
+.checkbox-group label::before {
+  content: "";
+  display: inline-block;
+}
+
+/* dùng before để tạo ra hình vuông giống style checkbox */
+.checkbox-group label::before {
+  margin-right: 10px;
+
+  width: 14px;
+  height: 14px;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+/* kiểm tra thuộc tính có type = checkbox có dc check ko */
+.checkbox-group [type="checkbox"]:checked ~ label::before {
+  background-color: #f05123;
+}
+
+.checkbox-group [type="checkbox"]:checked ~ label::after {
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  rotate: -45deg;
+}
+
+.checkbox-group label::after {
+  position: absolute;
+  top: 7px;
+  left: 3px;
+  background: #fff;
+}
+
+//Bài 119 =======================================================
+
+/* custom radio */
+.gender-group label {
+  position: relative;
+}
+
+.gender-group label::before {
+  margin-right: 4px;
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.gender-group label::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  display: none;
+}
+
+/* kiểm tra checked và thay đổi vị trí chấm tròn */
+#male:checked + label::after,
+#female:checked + label::after,
+#other:checked + label::after {
+  display: inline-block;
+}
+
+
+//Bài 120====================================================
+
+- chuyển màu nền
+
+:root {
+  --light: #d8dbe0;
+  --dark: #29292c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(70, 55, 55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* tăng độ rộng công tắc */
+.toggle-switch {
+  position: relative;
+  width: 200px;
+}
+
+/* vẽ nền của nút */
+label {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* tạo nền trắng */
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  /* background-color: var(--light); */
+  transition: 0.3s;
+}
+
+/* khi input dc check thì slider đổi nền trắng */
+input:checked ~ .slider {
+  background-color: var(--light);
+}
+
+/* vẽ mặt trăng */
+
+.slider::before {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  content: "";
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: var(--dark);
+
+  /* thêm boxshadow để che 1 phần hình tròn */
+  /* dùng inset để đổ bóng từ bên trong phần tử */
+  box-shadow: inset 20px 0px 0px 0px var(--light);
+  transition: 0.3s;
+}
+
+input:checked ~ .slider::before {
+  transform: translateX(95px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+/* chuyển màu nền */
+body:has(:checked) {
+  background-color: var(--light);
+}
