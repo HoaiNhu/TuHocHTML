@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- lưu ý rest.css luôn đặt trên cùng -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Bài 114 - html form: action</title>
+  </head>
+  <body>
+    <form action="https://www.bing.com/search">
+      <label>
+        Username:
+        <input type="text" name="q" id="" />
+      </label>
+
+      <input type="submit" value="Send me" />
+    </form>
+
+    <h2>1. google search</h2>
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" id="" />
+      <input type="submit" value="Search" />
+    </form>
+
+    <h2>2. youtube</h2>
+    <form action="https://www.youtube.com/results">
+      <input type="text" name="search_query" id="">
+      <input type="submit" value="Send me">
+    </form>
+  </body>
+</html>

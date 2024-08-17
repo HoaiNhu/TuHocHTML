@@ -1,0 +1,20 @@
+/* khi placeholder của thẻ input dg còn hiển thị */
+input:placeholder-shown {
+  background-color: cyan;
+}
+
+/* chọn thẻ input có placeholder đang ko hiển thị -> thẻ đã nhập */
+input:not(:placeholder-shown) {
+  background-color: pink;
+}
+
+/* kiểm tra login-form có phần tử nào dg dc focus ko */
+.login-form:focus-within {
+  background-color: blue;
+}
+
+
+/* có phần tử dc focus thì đổi màu button */
+.login-form:focus-within button {
+    background-color: red;
+}
