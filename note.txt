@@ -56,8 +56,9 @@
 //thư viện animate: https://animate.style/
 //filter css: https://www.w3schools.com/cssref/css3_pr_filter.php
 //html form: thẻ form để nhập liệu: https://www.w3schools.com/tags/tag_form.asp
-
-
+//webglow: lm portfolio: https://webflow.com/blog/how-to-make-an-online-portfolio
+//squarespace: https://support.squarespace.com/hc/en-us/articles/210295778-Building-a-portfolio-site
+//wix: https://www.wix.com/blog/how-to-make-a-personal-website
 
 
 
